@@ -1,3 +1,143 @@
-body {
+#fullscreen-slider {
+	position:absolute;
+	top: 20px;
+	left: 20px;
+	cursor: pointer;
+}
 
+#fullscreen-slider-bar {
+	position:absolute;
+	left:0px;
+    width:150px;
+    height:64px;
+    /*background: url(../../images/camvid_bg.png) no-repeat;*/
+   background: url(../../images/accelerometer.png) no-repeat;
+}
+
+#fullscreen-slider-handle {
+    width:68px;
+    height:36px;
+    cursor:ew-resize;
+    background: url(../../images/camvid_gripper.png) no-repeat;
+	top: 21px;
+}
+
+#tank_body {
+	width: 149px;
+	height: 304px;
+	position:absolute;
+	bottom: 50px;
+	right: 50px;
+    background: url(../../PNGs/Body.png) no-repeat;
+    z-index: 0;
+}
+
+#turret {
+    width: 104px;
+    height: 300px;
+    position: absolute;
+    bottom: 95px;
+    right: 25px;
+    transform-origin:50% 75%;
+    -webkit-transform-origin:50% 75%;
+    -ms-transform-origin:50% 75%;
+    -o-transform-origin:50% 75%;
+    -moz-transform-origin:50% 75%;
+    background: url(../../PNGs/Turret.png) no-repeat;
+    z-index: 1;
+
+}
+
+#shoot_missile {
+    width: 23px;
+    height: 24px;
+    position: absolute;
+    bottom: 28px;
+    right: 56px;
+    background: url(../../PNGs/Shoot.png) no-repeat;
+    z-index: 2;
+}
+
+#pedal {
+	position:absolute;
+    width:47px;
+    height:94px;
+    bottom:10px;
+    background: url(../../PNGs/pedal.png);
+    cursor: pointer;
+}
+
+#forward {
+	width: 130px;
+	height: 36px;
+	position: relative;
+    background: url(../../images/forward.png) no-repeat;
+	left: 60px;
+	top: -10px;
+	cursor: pointer;
+}
+
+#backward {
+	width: 130px;
+	height: 36px;
+	position: relative;
+    background: url(../../images/backward.png) no-repeat;
+	left: 60px;
+	top: 55px;
+	cursor: pointer;
+	z-index: 2;
+}
+
+#strifeleft {
+	width: 36px;
+	height: 130px;
+	position: relative;
+    background: url(../../images/left.png) no-repeat;
+	left: -10px;
+	top: 24px;
+	cursor: pointer;
+}
+
+#striferight {
+	width: 36px;
+	height: 130px;
+	position: absolute;
+    background: url(../../images/right.png) no-repeat;
+	left: 225px;
+	top: 60px;
+	cursor: pointer;
+}
+
+#rotate_buttons {
+	width: 200px;
+	height: 63px;
+	position:absolute;
+	bottom: 15px;
+	right: 30px;
+	z-index:1;
+}
+
+#rotate_right {
+	width: 100px;
+	height: 63px;
+	position: absolute;
+    background: url(../../images/rotate_right.png) no-repeat;
+	right: 25px;
+	top: 0px;
+	cursor: pointer;	
+}
+
+#rotate_left {
+	width: 100px;
+	height: 63px;
+	position: absolute;
+    background: url(../../images/rotate_left.png) no-repeat;
+	right: 125px;
+	top: 0px;
+	cursor: pointer;
+}
+#debug {
+	position: absolute;
+	left:100px;
+	top:100px;
 }
