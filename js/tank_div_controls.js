@@ -61,6 +61,11 @@ function MouseTurretRotate(event) {
         }
     }
 }
+
+function Power(event) {
+	$("#tankPower")
+}
+
 function SetInitPosition(event){
     $('#hidden_mouse_positionX').val(event.clientX);
     $('#hidden_mouse_positionY').val(event.clientY);
@@ -149,7 +154,7 @@ function request(req) {
     	url: src,
     	data: "",
         success: function(transport) {
-            //var response = transport['responseText'] || "no response text";
+            var response = transport['responseText'] || "no response text";
         },
         error: function() { console.log('Something went wrong...'); }
     });

@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6542ede-a2e8-4936-943b-597f7f0fec9e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="DELETED" beforePath="C:\Users\zygimantas\Documents\stuffProgramming\tank_stuff\tank_attempt_no_2\tank-ktu-no-headers\js\tank.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ready.js" afterPath="$PROJECT_DIR$/js/ready.js" />
     </list>
     <ignored path="tank-ktu-no-headers.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -141,7 +142,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="320" y="111" width="1920" height="1027" extended-state="1" />
+    <frame x="320" y="111" width="1920" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />

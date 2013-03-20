@@ -10,6 +10,19 @@ $(document).ready(function() {
     	console.log("tankUP");
 	});
 
+	var on = false;
+	$("#tankPower").mousedown(function(e) {
+		request("tank/on");
+		request("tank/off");
+		if(!on) {
+			$("#tankPower").css("background", "url(images/tankPower.png) 0px 75px");
+			on = true;
+		} else {
+			$("#tankPower").css("background", "url(images/tankPower.png) 0 0");
+			on = false;
+		}
+	});
+
 	$('#tankTurret').mousemove(function(e) {
 		MouseTurretRotate(e);
 	});
