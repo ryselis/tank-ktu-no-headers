@@ -136,6 +136,7 @@ function RotateTurretImageClock() {
 }
 
 function RotateTurretImageCountClock() {
+	console.log("super trololo");
 	$('#tankTurret').css('-moz-transform',  'rotate(-15deg)');
 	$('#tankTurret').css('-webkit-transform', 'rotate(-15deg)');
 }
@@ -149,12 +150,6 @@ function request(req) {
     	data: "",
         success: function(transport) {
             //var response = transport['responseText'] || "no response text";
-            //^^not used, so I commented it out
-            
-            //$("fotoimage").css({display: 'block'});
-            //$("fotoimage").setAttribute('src',src);
-            hideImage.delay(5);
-            savingFoto = false;
         },
         error: function() { console.log('Something went wrong...'); }
     });
@@ -194,6 +189,7 @@ function tankMove(move, state) {
 					MoveTankImageUp();
 					break;
 				case 'forward_fast':
+					setPedalPosition(0);
 					request('move/0');
 					MoveTankImageUp();
 					break;
@@ -202,6 +198,7 @@ function tankMove(move, state) {
 					MoveTankImageDown();
 					break;
 				case 'back_fast':
+					setPedalPosition(0);
 					request('move/255');
 					MoveTankImageDown();
 					break;
@@ -268,4 +265,15 @@ function turretMove(side, state){
    }
 }
 
+
+var shiftDown = false;
+function setPedalPosition (pos) {
+    if (pos == 1) {
+        $('#speedPedal').css("background", "url(images/pedal.png) 0 94px");
+        shiftDown = true;
+    }   else {
+        $('#speedPedal').css("background", "url(images/pedal.png) 0 0");
+        shiftDown = false;
+    }
+}
 

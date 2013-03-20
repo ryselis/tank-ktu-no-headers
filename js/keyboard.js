@@ -4,7 +4,7 @@ $(document).keydown( function (e) {
 
     switch (e.keyCode) {
         case 16:        // Shift
-            //setPedalPosition(1);
+            setPedalPosition(1);
             break;
     }
     switch (e.keyCode) {
@@ -107,7 +107,7 @@ $(document).keyup( function(e){
             RevertTurret();
             break;
         case 16:        // Shift
-            //setPedalPosition(0);
+            setPedalPosition(0);
             break;
         case 188:       // ,
             RevertTurret();
