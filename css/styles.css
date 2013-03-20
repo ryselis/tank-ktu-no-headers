@@ -66,3 +66,12 @@ body
     background: url(../images/pedal.png);
     cursor: pointer;
 }
+
+#tankPower {
+	position:absolute;
+	width:75px;
+	height:75px;
+	top:10px;
+	left:10px;
+	background: url(../images/tankPower.png)
+}
