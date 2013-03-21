@@ -270,6 +270,7 @@ function turretMove(side, state){
 	        $('#tankTurret').css('-moz-transform', 'rotate(0deg)');
 	        $('#tankTurret').css('-webkit-transform', 'rotate(360deg)');
 	    }
+	    
     prevEventTurret = side;
     prevStateTurret = state;
    }
