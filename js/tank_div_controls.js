@@ -141,7 +141,6 @@ function RotateTurretImageClock() {
 }
 
 function RotateTurretImageCountClock() {
-	console.log("super trololo");
 	$('#tankTurret').css('-moz-transform',  'rotate(-15deg)');
 	$('#tankTurret').css('-webkit-transform', 'rotate(-15deg)');
 }
@@ -261,7 +260,6 @@ function turretMove(side, state){
 	                break;
 	        }
 	    } else {
-	    	console.log('trololo I rotate turret');
 	        $('#tankTurret').css('-moz-transform', 'rotate(0deg)');
 	        $('#tankTurret').css('-webkit-transform', 'rotate(360deg)');
 	    }

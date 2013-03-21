@@ -7,8 +7,11 @@ $(document).ready(function() {
 	});
 	$('#tankBody').mousedown(function(e) {
 		SetInitPosition(e);
-    	console.log("tankUP");
 	});
+
+	$("#tankShoot").mouseup(function(e) {
+		tankShoot("cannon_on");
+	})
 
 	var on = false;
 	$("#tankPower").mousedown(function(e) {
@@ -30,7 +33,9 @@ $(document).ready(function() {
 		SetInitPositionTurret(e);
 	});
 
-	$(document).mouseup(function(e){RevertTank()});
+	$(document).mouseup(function(e){
+		RevertTank();
+	});
 	screenfull.onchange = function() {
 		if (screenfull.isFullscreen == false)//&&(EnteringFullscreen==false))
 		{
