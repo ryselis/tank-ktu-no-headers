@@ -173,11 +173,11 @@ function tankMove(move, state) {
 		if (state) {
 			switch(move) {
 				case 'left':
-					request('rotate/100');
+					request('rotate/50');
 					RotateTankImageCountClock();
 					break;
 				case 'right':
-					request('rotate/160');
+					request('rotate/200');
 					RotateTankImageClock();
 					break;
 				case 'left_fast':
@@ -189,7 +189,7 @@ function tankMove(move, state) {
 					RotateTankImageClock();
 					break;
 				case 'forward':
-					request('move/94');
+					request('move/100');
 					MoveTankImageUp();
 					break;
 				case 'forward_fast':
@@ -270,7 +270,7 @@ function turretMove(side, state){
 	        $('#tankTurret').css('-moz-transform', 'rotate(0deg)');
 	        $('#tankTurret').css('-webkit-transform', 'rotate(360deg)');
 	    }
-	    
+
     prevEventTurret = side;
     prevStateTurret = state;
    }
