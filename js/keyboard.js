@@ -70,6 +70,11 @@ $(document).keydown( function (e) {
             break;
         case 17:        //Ctrl
             tankShoot('cannon_on');
+            break;
+        case 82:
+            turretMove("vertical", true);
+            break;
+
     }
 
 });
@@ -114,6 +119,9 @@ $(document).keyup( function(e){
             break;
         case 190:       // .
             RevertTurret();
+            break;
+        case 82:
+            turretMove("vertical", false);
             break;
     }
 });

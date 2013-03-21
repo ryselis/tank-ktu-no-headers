@@ -240,7 +240,6 @@ function tankMove(move, state) {
 	}
 }
 
-
 function turretMove(side, state){
 	if (!(prevEventTurret == side && prevStateTurret == state)) {
 	    var stateT;
@@ -249,7 +248,15 @@ function turretMove(side, state){
 	    }   else {
 	        stateT = "/off";
 	    }
-		request('turret/' + side + stateT);
+	    if(side == "vertical") {
+	    	if(state) {
+	    		request("main_gun/move/on");
+	    	} else {
+	    		request("main_gun/move/off");
+	    	}
+	    } else {
+			request('turret/' + side + stateT);
+		}
 		if (state) {
 	        switch(side){
 	            case 'left':
