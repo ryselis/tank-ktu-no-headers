@@ -69,7 +69,7 @@ $(document).keydown( function (e) {
             turretMove('right', true);
             break;
         case 17:        //Ctrl
-            tankShoot('cannon_on');
+            turretMove('cannon_on', true);
             break;
         case 82:
             turretMove("vertical", true);
@@ -122,6 +122,9 @@ $(document).keyup( function(e){
             break;
         case 82:
             turretMove("vertical", false);
+            break;
+        case 17:        //Ctrl
+            turretMove('cannon_on', false);
             break;
     }
 });

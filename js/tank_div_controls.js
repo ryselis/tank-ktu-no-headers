@@ -155,18 +155,9 @@ function request(req) {
         success: function(transport) {
             var response = transport['responseText'] || "no response text";
         },
-        error: function() { console.log('Something went wrong...'); }
+        //error: function() { console.log('Something went wrong...'); }
     });
 }
-
-function tankShoot(gun) {
-    if (gun == "cannon_on") {
-        request("main_gun/fire_simulate/on");
-    }
-
-}
-
-
 
 function tankMove(move, state) {
 	if (!(move == prevEvent && state == prevState)) {
@@ -254,7 +245,13 @@ function turretMove(side, state){
 	    	} else {
 	    		request("main_gun/move/off");
 	    	}
-	    } else {
+	    } else if(side == "cannon_on") {
+        	if(state) {
+        		request("main_gun/fire/on");
+        	} else {
+    			request("main_gun/fire/off");		
+        	}
+    	} else {
 			request('turret/' + side + stateT);
 		}
 		if (state) {

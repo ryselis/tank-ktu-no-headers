@@ -9,8 +9,11 @@ $(document).ready(function() {
 		SetInitPosition(e);
 	});
 
+	$("#tankShoot").mousedown(function(e) {
+		turretMove("cannon_on", true);
+	})
 	$("#tankShoot").mouseup(function(e) {
-		tankShoot("cannon_on");
+		turretMove("cannon_on", false);
 	})
 
 	var on = false;
