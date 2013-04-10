@@ -252,7 +252,13 @@ function turretMove(side, state){
     			request("main_gun/fire/off");		
         	}
     	} else {
-			request('turret/' + side + stateT);
+    		switch (side){
+    			case 'left':
+					request('turret/' + 'right' + stateT);
+					break;
+				case 'right':
+					request('turret/' + 'left' + stateT);
+			}
 		}
 		if (state) {
 	        switch(side){
