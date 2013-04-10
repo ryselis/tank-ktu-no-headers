@@ -14,7 +14,7 @@ $(document).ready(function() {
 		SetInitPositionTurret(e)
 	});
 
-	$(document).mouseup(function(e){RevertTank()});
+	$(document).mouseup(function(e){request('forward',false);});
 	screenfull.onchange = function() {
 		if (screenfull.isFullscreen == false)//&&(EnteringFullscreen==false))
 		{

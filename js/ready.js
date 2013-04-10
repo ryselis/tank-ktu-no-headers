@@ -37,7 +37,9 @@ $(document).ready(function() {
 	});
 
 	$(document).mouseup(function(e){
-		RevertTank();
+		tankMove('forward', false);
+		tankMove('left', false);
+		RevertTurret();
 	});
 	screenfull.onchange = function() {
 		if (screenfull.isFullscreen == false)//&&(EnteringFullscreen==false))

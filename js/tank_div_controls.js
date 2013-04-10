@@ -90,9 +90,12 @@ function RevertTank(){
 }
 function RevertTurret() {
     $('#hidden_mouse_positionT').val(-1);
-
-    turretMove('left', false);
-    turretMove('right', false);
+    if (prevEventTurret == 'left'){
+    	turretMove('left', false);
+    }
+    else{	
+    	turretMove('right', false);
+    }
 }
 
 function RevertTankRotate() {
@@ -100,7 +103,6 @@ function RevertTankRotate() {
     $('#tankBody').css('-webkit-transform', 'rotate(360deg)');
     $('#hidden_mouse_positionX').val(-1);
     
-   //tankMove('left', false);
 }
 
 function RevertTankMove(){
@@ -234,6 +236,9 @@ function tankMove(move, state) {
 function turretMove(side, state){
 	if (!(prevEventTurret == side && prevStateTurret == state)) {
 	    var stateT;
+	    if (prevStateTurret == 'on' && prevEventTurret != side){
+	    	request(prevEventTurret, 'off');
+	    }
 	    if (state) {
 	        stateT = "/on";
 	    }   else {
