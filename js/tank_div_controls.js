@@ -3,6 +3,7 @@ var prevState;
 var prevEventTurret;
 var prevStateTurret;
 function MouseTankMove(event) {
+	event.preventDefault();
     var xOff = 10;
     var yOff = 10;
 	var positionX = $('#hidden_mouse_positionX').val();
@@ -44,6 +45,7 @@ function MouseTankMove(event) {
 
 function MouseTurretRotate(event) {
     //cancel bubble
+    event.preventDefault();
     if (!event) var event = window.event;
     if (event) event.cancelBubble = true;
     if (event.stopPropagation) event.stopPropagation();
@@ -63,15 +65,18 @@ function MouseTurretRotate(event) {
 }
 
 function Power(event) {
+	event.preventDefault();
 	$("#tankPower")
 }
 
 function SetInitPosition(event){
+	event.preventDefault();
     $('#hidden_mouse_positionX').val(event.clientX);
     $('#hidden_mouse_positionY').val(event.clientY);
 }
 
 function SetInitPositionTurret(event) {
+	event.preventDefault();
     $('#hidden_mouse_positionT').val(event.clientX);
 }
 
