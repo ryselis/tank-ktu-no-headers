@@ -51,5 +51,5 @@ $(document).ready(function() {
 	screenfull.onerror = function() {
 		alert("Fullscreen API error");
 	}
-	window.addEventListener("devicemotion", onDeviceMotion, false);
+	
 }); 
