@@ -53,16 +53,36 @@ $(document).ready(function() {
 	}
 	
 	$("#tankBody").touchwipe({
-	    wipeLeft: function() { tankMove('left', true); },
-     	wipeRight: function() { tankMove('right', true);  },
-    	wipeUp: function() { tankMove('back', true); },
-     	wipeDown: function() { tankMove('forward', true); },
+	    wipeLeft: function() {
+	    	RevertTurret();
+	    	tankMove('left', true); 
+	    },
+     	wipeRight: function() {
+     		RevertTurret();
+     		tankMove('right', true);  
+     	},
+    	wipeUp: function() {
+    		RevertTurret();
+    		tankMove('back', true); 
+    	},
+     	wipeDown: function() { 
+     		RevertTurret();
+     		tankMove('forward', true); 
+     	},
      	preventDefaultEvents: true
 	}); 
 	
 	$("#tankTurret").touchwipe({
-		wipeLeft: function() { turretMove('left', true); },
-     	wipeRight: function() { turretMove('right', true);  },
+		wipeLeft: function() {
+			tankMove('forward', false);
+			tankMove('left', false);
+			turretMove('left', true); 
+		},
+     	wipeRight: function() {
+     		tankMove('forward', false);
+			tankMove('left', false);
+     		turretMove('right', true);  
+     	},
 		preventDefaultEvents: true
 	});
 	
