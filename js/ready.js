@@ -84,8 +84,8 @@ $(document).ready(function() {
      		turretMove('right', true);  
      	},
 		preventDefaultEvents: true,
-		cancelBubble: true,
-		stopPropagation()
+		cancelBubble: true
+	//	stopPropagation()
 	});
 	
 	window.addEventListener("devicemotion",onDeviceMotion,false);
