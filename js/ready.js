@@ -83,7 +83,8 @@ $(document).ready(function() {
 			tankMove('left', false);
      		turretMove('right', true);  
      	},
-		preventDefaultEvents: true
+		preventDefaultEvents: true,
+		cancelBubble: true
 	});
 	window.addEventListener("devicemotion",onDeviceMotion,false);
 	})
