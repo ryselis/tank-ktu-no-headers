@@ -84,7 +84,9 @@ $(document).ready(function() {
      		turretMove('right', true);  
      	},
 		preventDefaultEvents: true,
-		cancelBubble: true
+		cancelBubble: true,
+		stopPropagation()
 	});
+	
 	window.addEventListener("devicemotion",onDeviceMotion,false);
 	})
