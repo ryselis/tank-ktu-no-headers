@@ -54,19 +54,19 @@ $(document).ready(function() {
 	
 	$("#tankBody").touchwipe({
 	    wipeLeft: function() {
-	    	RevertTurret();
+	    //	RevertTurret();
 	    	tankMove('left', true); 
 	    },
      	wipeRight: function() {
-     		RevertTurret();
+     	//	RevertTurret();
      		tankMove('right', true);  
      	},
     	wipeUp: function() {
-    		RevertTurret();
+    	//	RevertTurret();
     		tankMove('back', true); 
     	},
      	wipeDown: function() { 
-     		RevertTurret();
+     	//	RevertTurret();
      		tankMove('forward', true); 
      	},
      	preventDefaultEvents: true
