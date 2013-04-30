@@ -4,11 +4,11 @@ function onDeviceMotion(event){
 	var accelerationZ = event.accelerationIncludingGravity.z;
 	if (accelerationZ > 2){
 		tankMove('forward', true);
-		$("#state").text('forward true');
+		$("#state").text(accelerationZ);
 	}
 	else{
 		tankMove('forward', false);
-		$("#state").text('forward false');
+		$("#state").text(accelerationZ);
 	}
 	/*if (accelerationZ < -2){
 		tankMove('back', true);
