@@ -52,7 +52,7 @@ $(document).ready(function() {
 		alert("Fullscreen API error");
 	}
 	
-	$('#tankBody').touchwipe({
+	$("#tankBody").touchwipe({
 	    wipeLeft: function() { tankMove('left', true); },
      	wipeRight: function() { tankMove('right', true);  },
     	wipeUp: function() { tankMove('forward', true); },
@@ -60,4 +60,14 @@ $(document).ready(function() {
      	min_move_x: 20,
      	min_move_y: 20,
      	preventDefaultEvents: true
-}); 
+	}); 
+	
+	$("#tankTurret").touchwipe({
+		preventDefaultEvents: true,
+		wipeLeft: function() { turretMove('left', true); },
+     	wipeRight: function() { turretMove('right', true);  },
+     	min_move_x: 20,
+     	min_move_y: 20
+	});
+	
+	})
