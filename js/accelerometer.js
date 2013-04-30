@@ -20,7 +20,22 @@ function onDeviceMotion(event){
 		tankMove('back', false);
 	}
 	
-	$('#stateLR').text(accelerationY);
+	if (accelerationY > 4){
+		$('#stateLR').text('left true' + accelerationY);
+		tankMove('left', true);
+	}
+	else{
+		$('#stateLR').text('left false' + accelerationY);
+		tankMove('left', false);
+	}
+	if (accelerationY < -4){
+		$('#stateLR').text('right true' + accelerationY);
+		tankMove('right', true);
+	}
+	else{
+		$('#stateLR').text('right false' + accelerationY);
+		tankMove('right', false);
+	}
 	/*if (accelerationZ < -2){
 		tankMove('back', true);
 	}
