@@ -1,4 +1,3 @@
-
 function onDeviceMotion(event){
 	var accelerationX = event.accelerationIncludingGravity.x;
 	var accelerationY = event.accelerationIncludingGravity.y;
@@ -8,5 +7,17 @@ function onDeviceMotion(event){
 	}
 	else{
 		tankMove('forward', false);
+	}
+	if (accelerationX > 2){
+		tankMove('left', true);
+	}
+	else{
+		tankMove('forward', false);
+	}
+	if (accelerationY > 2){
+		turretMove('vertical', true);
+	}
+	else{
+		turretMove('vertical', false);
 	}
 }
