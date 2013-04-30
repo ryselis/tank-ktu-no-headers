@@ -55,15 +55,18 @@ $(document).ready(function() {
 	$("#tankBody").touchwipe({
 	    wipeLeft: function() { tankMove('left', true); },
      	wipeRight: function() { tankMove('right', true);  },
-    	wipeUp: function() { tankMove('forward', true); },
-     	wipeDown: function() { tankMove('back', true); },
+    	wipeUp: function() { tankMove('back', true); },
+     	wipeDown: function() { tankMove('forward', true); },
      	preventDefaultEvents: true
+     	tankMove('forward', false);
+		tankMove('left', false);
 	}); 
 	
 	$("#tankTurret").touchwipe({
 		wipeLeft: function() { turretMove('left', true); },
      	wipeRight: function() { turretMove('right', true);  },
 		preventDefaultEvents: true
+		RevertTurret();
 	});
 	
 	})
