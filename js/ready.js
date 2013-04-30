@@ -52,42 +52,78 @@ $(document).ready(function() {
 		alert("Fullscreen API error");
 	}
 	
+	var l = false, r = false, b = false, f = false, tl = false, tr = false;
 	$("#tankBody").touchwipe({
 	    wipeLeft: function() {
-	    //	RevertTurret();
-	    	tankMove('left', true); 
+	    	if (!l){
+	    		l = true;
+	    		tankMove('left', true);
+	    	}
+	    	if (r){
+	    		r = false;
+	    		tankMove('left', false);
+	    	}
 	    },
      	wipeRight: function() {
-     	//	RevertTurret();
-     		tankMove('right', true);  
+     		
+     		if (!r){
+     			r = true;
+     			tankMove('right', true);
+     		}
+     		if (l){
+     			l = false;
+     			tankMove('left', false);
+     		}  
      	},
     	wipeUp: function() {
-    	//	RevertTurret();
-    		tankMove('back', true); 
+    		if (!b){
+    			b = true;
+    			tankMove('back', true);
+    		}
+    		if (f){
+    			f = false;
+    			tankMove('forward', false);
+    		}
     	},
      	wipeDown: function() { 
-     	//	RevertTurret();
-     		tankMove('forward', true); 
+     		if (!f){
+     			f = true;
+     			tankMove('forward', true);
+     		}
+     		if (b){
+     			b = false;
+     			tankMove('forward', false);
+     		} 
      	},
      	preventDefaultEvents: true
 	}); 
 	
 	$("#tankTurret").touchwipe({
 		wipeLeft: function(e) {
-			tankMove('forward', false);
-			tankMove('left', false);
-			turretMove('left', true); 
 			e.stopPropagation();
+			if (!tl){
+				tl = true;
+				turretMove('left', true);
+			}
+			if (tr){
+				tr = false;
+				RevertTurret();
+			}
+			
 		},
      	wipeRight: function(e) {
-     		tankMove('forward', false);
-			tankMove('left', false);
-     		turretMove('right', true);
-     		e.stopPropagation();  
+     		e.stopPropagation(); 
+     		if (!tr){
+     			tr = true;
+     			turretMove('right', true);
+   			}
+     		if (tl){
+     			tl = false;
+     			RevertTurret();
+     		}
      	},
 		preventDefaultEvents: true,
 		cancelBubble: true
-	//	stopPropagation()
 	});
 	
 	window.addEventListener("devicemotion",onDeviceMotion,false);
