@@ -5,9 +5,9 @@ function onDeviceMotion(event){
 	if (accelerationZ > 2){
 		tankMove('forward', true);
 	}
-	else{
+	/*else{
 		tankMove('forward', false);
-	}
+	}*/
 	/*if (accelerationZ < -2){
 		tankMove('back', true);
 	}
