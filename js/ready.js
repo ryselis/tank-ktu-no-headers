@@ -58,15 +58,12 @@ $(document).ready(function() {
     	wipeUp: function() { tankMove('back', true); },
      	wipeDown: function() { tankMove('forward', true); },
      	preventDefaultEvents: true
-     	tankMove('forward', false);
-		tankMove('left', false);
 	}); 
 	
 	$("#tankTurret").touchwipe({
 		wipeLeft: function() { turretMove('left', true); },
      	wipeRight: function() { turretMove('right', true);  },
 		preventDefaultEvents: true
-		RevertTurret();
 	});
 	
 	})
