@@ -85,5 +85,5 @@ $(document).ready(function() {
      	},
 		preventDefaultEvents: true
 	});
-	
+	window.addEventListener("devicemotion",onDeviceMotion,false);
 	})
