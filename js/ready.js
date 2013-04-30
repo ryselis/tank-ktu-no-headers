@@ -73,15 +73,17 @@ $(document).ready(function() {
 	}); 
 	
 	$("#tankTurret").touchwipe({
-		wipeLeft: function() {
+		wipeLeft: function(e) {
 			tankMove('forward', false);
 			tankMove('left', false);
 			turretMove('left', true); 
+			e.stopPropagation();
 		},
-     	wipeRight: function() {
+     	wipeRight: function(e) {
      		tankMove('forward', false);
 			tankMove('left', false);
-     		turretMove('right', true);  
+     		turretMove('right', true);
+     		e.stopPropagation();  
      	},
 		preventDefaultEvents: true,
 		cancelBubble: true
