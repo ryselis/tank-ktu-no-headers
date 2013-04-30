@@ -12,9 +12,11 @@ function onDeviceMotion(event){
 	}
 	
 	if (accelerationZ > 0){
+		$("#state").text('back true' + accelerationZ);
 		tankMove('back', true);
 	}
 	else{
+		$("#state").text('back false' + accelerationZ);
 		tankMove('back', false);
 	}
 	/*if (accelerationZ < -2){
