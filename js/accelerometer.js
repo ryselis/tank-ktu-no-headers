@@ -19,6 +19,8 @@ function onDeviceMotion(event){
 		$("#state").text('back false' + accelerationZ);
 		tankMove('back', false);
 	}
+	
+	$('#stateLR').text(accelerationX);
 	/*if (accelerationZ < -2){
 		tankMove('back', true);
 	}
