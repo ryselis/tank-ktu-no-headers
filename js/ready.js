@@ -53,10 +53,10 @@ $(document).ready(function() {
 	}
 	
 	$('#tankBody').touchwipe({
-	    wipeLeft: function() { alert("left"); },
-     	wipeRight: function() { alert("right"); },
-    	wipeUp: function() { alert("up"); },
-     	wipeDown: function() { alert("down"); },
+	    wipeLeft: function() { tankMove('left', true); },
+     	wipeRight: function() { tankMove('right', true);  },
+    	wipeUp: function() { tankMove('forward', true); },
+     	wipeDown: function() { tankMove('back', true); },
      	min_move_x: 20,
      	min_move_y: 20,
      	preventDefaultEvents: true
