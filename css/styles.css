@@ -75,3 +75,8 @@ body
 	left:10px;
 	background: url(../images/tankPower.png);
 }
+
+#wipe {
+	top:100px;
+	left:15px;
+}

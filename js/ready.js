@@ -54,6 +54,7 @@ $(document).ready(function() {
 	
 	var l = false, r = false, b = false, f = false, tl = false, tr = false;
 	$("#tankBody").touchwipe({
+		$("#wipe").text('left: ' + l + ' right: ' + r + ' back: ' + b + ' forward: ' f);
 	    wipeLeft: function() {
 	    	if (!l){
 	    		l = true;
