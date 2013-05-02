@@ -52,48 +52,48 @@ $(document).ready(function() {
 		alert("Fullscreen API error");
 	}
 	
-	var l = false, r = false, b = false, f = false, tl = false, tr = false;
+//	var l = false, r = false, b = false, f = false, tl = false, tr = false;
 	$("#tankBody").touchwipe({
 	    wipeLeft: function() {
-	    	if (!l){
-	    		l = true;
+//	    	if (!l){
+//	    		l = true;
 	    		tankMove('left', true);
+//	    	}
+//	    	if (r){
+//	    		r = false;
+//	    		tankMove('left', false);
 	    	}
-	    	if (r){
-	    		r = false;
-	    		tankMove('left', false);
-	    	}
-	    	$("#wipe").text('left: ' + l + ' right: ' + r + ' back: ' + b + ' forward: ' + f);
+//	    	$("#wipe").text('left: ' + l + ' right: ' + r + ' back: ' + b + ' forward: ' + f);
 	    },
      	wipeRight: function() {
-     		if (!r){
-     			r = true;
-     			tankMove('right', true);
-     		}
-     		if (l){
-     			l = false;
-     			tankMove('left', false);
-     		}  
+//     		if (!r){
+//     			r = true;
+    			tankMove('right', true);
+//     		}
+//     		if (l){
+//     			l = false;
+//     			tankMove('left', false);
+//     		}  
      	},
     	wipeUp: function() {
-    		if (!b){
-    			b = true;
+ //   		if (!b){
+//    			b = true;
     			tankMove('back', true);
-    		}
-    		if (f){
-    			f = false;
-    			tankMove('forward', false);
-    		}
+//    		}
+//    		if (f){
+//   			f = false;
+//    			tankMove('forward', false);
+//   		}
     	},
      	wipeDown: function() { 
-     		if (!f){
-     			f = true;
+//     		if (!f){
+//     			f = true;
      			tankMove('forward', true);
-     		}
-     		if (b){
-     			b = false;
-     			tankMove('forward', false);
-     		} 
+//     		}
+//     		if (b){
+//     			b = false;
+//     			tankMove('forward', false);
+//     		} 
      	},
      	preventDefaultEvents: true
 	});
