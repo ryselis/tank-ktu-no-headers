@@ -99,31 +99,32 @@ $(document).ready(function() {
 	}); 
 	
 	$("#tankTurret").touchwipe({
-		wipeLeft: function(e) {
-			e.stopPropagation();
+		wipeLeft: function(event) {
+			event.cancelBubble = true;
+			event.stopPropagation();
 			if (!tl){
 				tl = true;
 				turretMove('left', true);
 			}
 			if (tr){
 				tr = false;
-				RevertTurret();
+				turretMove('right', false);
 			}
 			
 		},
-     	wipeRight: function(e) {
-     		e.stopPropagation(); 
+     	wipeRight: function(event) {
+     		event.cancelBubble = true;
+     		event.stopPropagation();
      		if (!tr){
      			tr = true;
      			turretMove('right', true);
    			}
      		if (tl){
      			tl = false;
-     			RevertTurret();
+     			turretMove('left', false);
      		}
      	},
-		preventDefaultEvents: true,
-		cancelBubble: true
+		preventDefaultEvents: true
 	});
 	
 	window.addEventListener("devicemotion",onDeviceMotion,false);
