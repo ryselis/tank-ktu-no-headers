@@ -97,7 +97,7 @@ $(document).ready(function() {
      	},
      	preventDefaultEvents: true
 	}); 
-	
+/*	
 	$("#tankTurret").touchwipe({
 		wipeLeft: function(event) {
 			event.cancelBubble = true;
@@ -126,6 +126,6 @@ $(document).ready(function() {
      	},
 		preventDefaultEvents: true
 	});
-	
+	*/
 	window.addEventListener("devicemotion",onDeviceMotion,false);
 	})
