@@ -62,7 +62,7 @@ $(document).ready(function() {
 //	    	if (r){
 //	    		r = false;
 //	    		tankMove('left', false);
-	    	}
+//	    	}
 //	    	$("#wipe").text('left: ' + l + ' right: ' + r + ' back: ' + b + ' forward: ' + f);
 	    },
      	wipeRight: function() {
