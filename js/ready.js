@@ -54,7 +54,6 @@ $(document).ready(function() {
 	
 	var l = false, r = false, b = false, f = false, tl = false, tr = false;
 	$("#tankBody").touchwipe({
-		$("#wipe").text('left: ' + l + ' right: ' + r + ' back: ' + b + ' forward: ' f);
 	    wipeLeft: function() {
 	    	if (!l){
 	    		l = true;
@@ -64,9 +63,9 @@ $(document).ready(function() {
 	    		r = false;
 	    		tankMove('left', false);
 	    	}
+	    	$("#wipe").text('left: ' + l + ' right: ' + r + ' back: ' + b + ' forward: ' + f);
 	    },
      	wipeRight: function() {
-     		
      		if (!r){
      			r = true;
      			tankMove('right', true);
@@ -97,7 +96,8 @@ $(document).ready(function() {
      		} 
      	},
      	preventDefaultEvents: true
-	}); 
+	});
+	 
 /*	
 	$("#tankTurret").touchwipe({
 		wipeLeft: function(event) {
