@@ -123,5 +123,17 @@ $(document).ready(function() {
 		preventDefaultEvents: true
 	});
 	*/
+	
+	accOn = false;
+	$("#accelerometerSwitch").mousedown(function(e) {
+		if(!accOn) {
+			$("#accelerometerSwitch").css("background", "url(images/tankPower.png) 0px 75px");
+			accOn = true;
+		} else {
+			$("#accelerometerSwitch").css("background", "url(images/tankPower.png) 0 0");
+			accOn = false;
+		}
+	});
+	
 	window.addEventListener("devicemotion",onDeviceMotion,false);
 	})

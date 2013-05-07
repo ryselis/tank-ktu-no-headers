@@ -75,3 +75,12 @@ body
 	left:10px;
 	background: url(../images/tankPower.png);
 }
+
+#accelerometerSwitch {
+	position:absolute;
+	width:75px;
+	height:75px;
+	top:10px;
+	right:10px;
+	background: url(../images/tankPower.png);
+}
