@@ -96,8 +96,9 @@ $(document).ready(function() {
 	
 	$("#tankTurret").touchwipe({
 		wipeLeft: function() {
-			event.cancelBubble = true;
-			event.stopPropagation();
+			var event = window.event;
+    		if (event) event.cancelBubble = true;
+    		if (event.stopPropagation) event.stopPropagation();
 			if (tr){
 				tr = false;
 				turretMove('right', false);
@@ -108,8 +109,11 @@ $(document).ready(function() {
 			
 		},
      	wipeRight: function() {
-     		event.cancelBubble = true;
-     		event.stopPropagation();
+     		var event = window.event;
+    		if (event) event.cancelBubble = true;
+    		if (event.stopPropagation) event.stopPropagation();
+     	/*	event.cancelBubble = true;
+     		event.stopPropagation();*/
      		if (tl){
      			tl = false;
      			turretMove('left', false);
