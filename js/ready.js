@@ -112,6 +112,7 @@ $(document).ready(function() {
      		var event = window.event;
     		if (event) event.cancelBubble = true;
     		if (event.stopPropagation) event.stopPropagation();
+    		if (event.stopImmediatePropagation) event.stopImmediatePropagation();
      	/*	event.cancelBubble = true;
      		event.stopPropagation();*/
      		if (tl){
