@@ -93,36 +93,34 @@ $(document).ready(function() {
      	preventDefaultEvents: true
 	});
 	 
-/*	
+	
 	$("#tankTurret").touchwipe({
 		wipeLeft: function(event) {
 			event.cancelBubble = true;
 			event.stopPropagation();
-			if (!tl){
-				tl = true;
-				turretMove('left', true);
-			}
 			if (tr){
 				tr = false;
 				turretMove('right', false);
+			} else {
+				tl = true;
+				turretMove('left', true);
 			}
 			
 		},
      	wipeRight: function(event) {
      		event.cancelBubble = true;
      		event.stopPropagation();
-     		if (!tr){
-     			tr = true;
-     			turretMove('right', true);
-   			}
      		if (tl){
      			tl = false;
      			turretMove('left', false);
+     		} else {
+     			tr = true;
+     			turretMove('right', true);
      		}
      	},
 		preventDefaultEvents: true
 	});
-	*/
+
 	
 	accOn = false;
 	$("#accelerometerSwitch").mousedown(function(e) {

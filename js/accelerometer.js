@@ -1,5 +1,4 @@
 function onDeviceMotion(event){
-	$("#wipe").text('Accelerometer: ' + accOn);
 	if (accOn){
 		var accelerationX = event.accelerationIncludingGravity.x;
 		var accelerationY = event.accelerationIncludingGravity.y;
