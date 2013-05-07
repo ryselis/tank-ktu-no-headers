@@ -154,7 +154,7 @@ function RotateTurretImageCountClock() {
 
 
 function request(req) {
-    src='http://192.168.42.202/' + req;
+    src='http://192.168.0.202/' + req;
     console.log(src);
     $.ajax({
     	url: src,
