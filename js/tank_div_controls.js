@@ -161,6 +161,7 @@ function request(req) {
 			success : function(transport) {
 				var response = transport['responseText'] || "no response text";
 			},
+			async : false
 			//error: function() { console.log('Something went wrong...'); }
 		});
 	}
