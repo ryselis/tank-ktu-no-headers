@@ -95,7 +95,7 @@ $(document).ready(function() {
 	 
 	
 	$("#tankTurret").touchwipe({
-		wipeLeft: function(event) {
+		wipeLeft: function() {
 			event.cancelBubble = true;
 			event.stopPropagation();
 			if (tr){
@@ -107,7 +107,7 @@ $(document).ready(function() {
 			}
 			
 		},
-     	wipeRight: function(event) {
+     	wipeRight: function() {
      		event.cancelBubble = true;
      		event.stopPropagation();
      		if (tl){
