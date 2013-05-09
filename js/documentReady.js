@@ -1,4 +1,7 @@
 $(document).ready(function() {
+	document.ontouchmove = function(event){
+    event.preventDefault();
+	}
 	$('#tank_body').mousemove(function(e) {
 		console.log('trololo I move turret]')
 		MouseTankMove(e)
