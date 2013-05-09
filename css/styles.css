@@ -31,6 +31,15 @@ body
     z-index: 0;
 }
 
+#tankBottom{
+	width: 149px;
+	height: 95px;
+	position:absolute;
+	bottom: 0px;
+	right: 0px;
+    z-index: 0;
+}
+
 #tankTurret {
     width: 104px;
     height: 300px;

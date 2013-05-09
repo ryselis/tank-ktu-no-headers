@@ -53,23 +53,23 @@ $(document).ready(function() {
 	}
 	
 	var l = false, r = false, b = false, f = false, tl = false, tr = false;
-	$("#tankBody").touchwipe({
+	$("#tankBottom").touchwipe({
 	    wipeLeft: function() {  		
 	    	if (r){
 	    		r = false;
-	    		tankMove('right', false);
+	    		tankMove('left', false);
 	    	} else {
 				l = true;
-				tankMove('left', true);
+				tankMove('right', true);
 	    	}
 	    },
      	wipeRight: function() {
      		if (l){
      			l = false;
-     			tankMove('left', false);
+     			tankMove('right', false);
      		}  else {
 				r = true;
-    			tankMove('right', true);
+    			tankMove('left', true);
 			}
      	},
     	wipeUp: function() {
