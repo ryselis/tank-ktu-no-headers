@@ -10,13 +10,13 @@ function onDeviceMotion(event) {
 		$("#stateF").text('x: ' + accelerationX);
 		$('#stateL').text('y: ' + accelerationY);
 		$('#stateR').text('z: ' + accelerationZ);
-		if (accelerationZ < -9.5) {
+		if (accelerationZ < -8 && accelerationX > 0) {
 			tankMove('forward_fast', true)
 			movesForward = true;
 			//$("#stateF").text('forward_fast true');
 			
 		} else {
-			if (accelerationZ < -8) {
+			if (accelerationZ < -9.5 && accelerationX > 0) {
 				tankMove('forward', true);
 				movesForward = true;
 				//$("#stateF").text('forward true');
