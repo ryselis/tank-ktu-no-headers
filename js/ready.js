@@ -131,6 +131,9 @@ $(document).ready(function() {
 	
 	accOn = false;
 	$("#accelerometerSwitch").mousedown(function(e) {
+		tankMove('forward', false);
+		tankMove('left', false);
+		RevertTurret();
 		if(!accOn) {
 			$("#accelerometerSwitch").css("background", "url(images/tankPower.png) 0px 75px");
 			accOn = true;
