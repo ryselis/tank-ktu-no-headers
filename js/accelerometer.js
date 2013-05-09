@@ -7,10 +7,14 @@ function onDeviceMotion(event) {
 		var accelerationX = event.accelerationIncludingGravity.x;
 		var accelerationY = event.accelerationIncludingGravity.y;
 		var accelerationZ = event.accelerationIncludingGravity.z;
+		$("#stateF").text('x: ', accelerationX);
+		$('#stateL').text('y: ', accelerationY);
+		$('#stateR').text('z: ', accelerationZ);
 		if (accelerationZ < -9.5) {
 			tankMove('forward_fast', true)
 			movesForward = true;
 			//$("#stateF").text('forward_fast true');
+			
 		} else {
 			if (accelerationZ < -8) {
 				tankMove('forward', true);
@@ -66,7 +70,7 @@ function onDeviceMotion(event) {
 			} else if(movesRight){
 				//$('#stateR').text('right false');
 				tankMove('right', false);
-				movesRight = false;
+				movesRight = false
 			}
 		}
 	}
@@ -75,5 +79,5 @@ function onDeviceMotion(event) {
  tankMove('back', true);
  }
  else{
- tankMove('back', false);s
+ tankMove('back', false);
  }*/

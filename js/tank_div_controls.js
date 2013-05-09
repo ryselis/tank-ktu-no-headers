@@ -178,51 +178,51 @@ function tankMove(move, state) {
 					request('rotate/80');
 					RotateTankImageCountClock();
 					leftcount++;
-					$('#stateL').text(leftcount);
+					//$('#stateL').text(leftcount);
 					break;
 				case 'right':
 					request('rotate/170');
 					RotateTankImageClock();
 					rightcount++;
-					$('#stateR').text(rightcount);
+					//$('#stateR').text(rightcount);
 					break;
 				case 'left_fast':
 					request('rotate/55');
 					RotateTankImageCountClock();
 					leftcount++;
-					$('#stateL').text(leftcount);
+					//$('#stateL').text(leftcount);
 					break;
 				case 'right_fast':
 					request('rotate/200');
 					RotateTankImageClock();
 					rightcount++;
-					$('#stateR').text(rightcount);
+					//$('#stateR').text(rightcount);
 					break;
 				case 'forward':
 					request('move/100');
 					MoveTankImageUp();
 					forwardcount++;
-					$('#stateF').text(forwardcount);
+					//$('#stateF').text(forwardcount);
 					break;
 				case 'forward_fast':
 					setPedalPosition(0);
 					request('move/55');
 					MoveTankImageUp();
 					forwardcount++;
-					$('#stateF').text(forwardcount);
+					//$('#stateF').text(forwardcount);
 					break;
 				case 'back':
 					request('move/154');
 					MoveTankImageDown();
 					backcoutn++;
-					$('#stateB').text(backcoutn);
+					//$('#stateB').text(backcoutn);
 					break;
 				case 'back_fast':
 					setPedalPosition(0);
 					request('move/200');
 					MoveTankImageDown();
 					backcoutn++;
-					$('#stateB').text(backcoutn);
+					//$('#stateB').text(backcoutn);
 					break;
 			}
 		}
