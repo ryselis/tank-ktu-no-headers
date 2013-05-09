@@ -53,6 +53,28 @@ $(document).ready(function() {
 	}
 	
 	var l = false, r = false, b = false, f = false, tl = false, tr = false;
+	$("#tankBody").touchwipe({
+		wipeUp: function() {
+    		if (f){
+   			f = false;
+    			tankMove('forward', false);
+	   		} else {
+				b = true;
+    			tankMove('back', true);
+			}
+    	},
+     	wipeDown: function() { 
+     		if (b){
+     			b = false;
+     			tankMove('back', false);
+     		} else {
+				f = true;
+     			tankMove('forward', true);
+			}
+     	},
+     	preventDefaultEvents: true
+	});
+	
 	$("#tankBottom").touchwipe({
 	    wipeLeft: function() {  		
 	    	if (r){
@@ -72,25 +94,7 @@ $(document).ready(function() {
     			tankMove('left', true);
 			}
      	},
-    	wipeUp: function() {
-    		if (f){
-   			f = false;
-    			tankMove('forward', false);
-	   		} else {
-				b = true;
-    			tankMove('back', true);
-			}
-    	},
-     	wipeDown: function() { 
-     		if (b){
-     			b = false;
-     			tankMove('back', false);
-     		} else {
-				f = true;
-     			tankMove('forward', true);
-			}
-     	},
-     	preventDefaultEvents: true
+    	eventDefaultEvents: true
 	});
 	 
 	
@@ -113,8 +117,6 @@ $(document).ready(function() {
     		if (event) event.cancelBubble = true;
     		if (event.stopPropagation) event.stopPropagation();
     		if (event.stopImmediatePropagation) event.stopImmediatePropagation();
-     	/*	event.cancelBubble = true;
-     		event.stopPropagation();*/
      		if (tl){
      			tl = false;
      			turretMove('left', false);
