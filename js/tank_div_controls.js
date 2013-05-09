@@ -172,19 +172,19 @@ function tankMove(move, state) {
 		if (state) {
 			switch(move) {
 				case 'left':
-					request('rotate/50');
+					request('rotate/80');
 					RotateTankImageCountClock();
 					break;
 				case 'right':
-					request('rotate/200');
+					request('rotate/170');
 					RotateTankImageClock();
 					break;
 				case 'left_fast':
-					request('rotate/0');
+					request('rotate/55');
 					RotateTankImageCountClock();
 					break;
 				case 'right_fast':
-					request('rotate/255');
+					request('rotate/200');
 					RotateTankImageClock();
 					break;
 				case 'forward':
@@ -193,16 +193,16 @@ function tankMove(move, state) {
 					break;
 				case 'forward_fast':
 					setPedalPosition(0);
-					request('move/0');
+					request('move/55');
 					MoveTankImageUp();
 					break;
 				case 'back':
-					request('move/160');
+					request('move/154');
 					MoveTankImageDown();
 					break;
 				case 'back_fast':
 					setPedalPosition(0);
-					request('move/255');
+					request('move/200');
 					MoveTankImageDown();
 					break;
 			}
