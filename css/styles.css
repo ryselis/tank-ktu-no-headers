@@ -1,3 +1,13 @@
+#img1, #img2 { 
+	top: 10px;
+	left: 8%;
+	right: 10px;
+	bottom: 10px;
+	position:absolute;
+	z-index: 1;
+  	width: 82%;
+}
+
 body
 {
 	width: auto;
