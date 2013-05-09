@@ -5,51 +5,51 @@ function onDeviceMotion(event) {
 		var accelerationZ = event.accelerationIncludingGravity.z;
 		if (accelerationZ < -9.5) {
 			tankMove('forward_fast', true)
-			$("#stateF").text('forward_fast true' + accelerationZ);
+			$("#stateF").text('forward_fast true');
 		} else {
 			if (accelerationZ < -8) {
 				tankMove('forward', true);
-				$("#stateF").text('forward true' + accelerationZ);
+				$("#stateF").text('forward true');
 			} else {
 				tankMove('forward', false);
-				$("#stateF").text('forward false' + accelerationZ);
+				$("#stateF").text('forward false');
 			}
 		}
 		if (accelerationZ > 1.5) {
-			$("#stateB").text('back_fast true' + accelerationZ);
+			$("#stateB").text('back_fast true');
 			tankMove('back_fast', true);
 		} else {
 			if (accelerationZ > 0) {
-				$("#stateB").text('back true' + accelerationZ);
+				$("#stateB").text('back true');
 				tankMove('back', true);
 			} else {
-				$("#stateB").text('back false' + accelerationZ);
+				$("#stateB").text('back false');
 				tankMove('back', false);
 			}
 		}
 
 		if (accelerationY > 5.5) {
-			$('#stateL').text('left_fast true' + accelerationY);
+			$('#stateL').text('left_fast true');
 			tankMove('left_fast', true);
 		} else { 
 			if (accelerationY > 4) {
-				$('#stateL').text('left true' + accelerationY);
+				$('#stateL').text('left true');
 				tankMove('left', true);
 			} else {
-				$('#stateL').text('left false' + accelerationY);
+				$('#stateL').text('left false');
 				tankMove('left', false);
 			}
 		}
 		
 		if (accelerationY < -5.5) {
-			$('#stateR').text('right_fast true' + accelerationY);
+			$('#stateR').text('right_fast true);
 			tankMove('right_fast', true);
 		} else {
 			if (accelerationY < -4) {
-				$('#stateR').text('right true' + accelerationY);
+				$('#stateR').text('right true');
 				tankMove('right', true);
 			} else {
-				$('#stateR').text('right false' + accelerationY);
+				$('#stateR').text('right false');
 				tankMove('right', false);
 			}
 		}
