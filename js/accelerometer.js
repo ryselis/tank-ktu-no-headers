@@ -42,7 +42,7 @@ function onDeviceMotion(event) {
 		}
 		
 		if (accelerationY < -5.5) {
-			$('#stateR').text('right_fast true);
+			$('#stateR').text('right_fast true');
 			tankMove('right_fast', true);
 		} else {
 			if (accelerationY < -4) {
