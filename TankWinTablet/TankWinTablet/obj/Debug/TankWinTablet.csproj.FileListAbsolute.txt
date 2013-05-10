@@ -1,0 +1,60 @@
+c:\users\petku_000\documents\visual studio 2012\Projects\TankWinTablet\TankWinTablet\bin\Debug\TankWinTablet.exe
+c:\users\petku_000\documents\visual studio 2012\Projects\TankWinTablet\TankWinTablet\bin\Debug\TankWinTablet.pdb
+c:\users\petku_000\documents\visual studio 2012\Projects\TankWinTablet\TankWinTablet\bin\Debug\resources.pri
+c:\users\petku_000\documents\visual studio 2012\Projects\TankWinTablet\TankWinTablet\bin\Debug\AppxManifest.xml
+c:\users\petku_000\documents\visual studio 2012\Projects\TankWinTablet\TankWinTablet\bin\Debug\TankWinTablet.build.appxrecipe
+c:\users\petku_000\documents\visual studio 2012\Projects\TankWinTablet\TankWinTablet\obj\Debug\App.g.i.cs
+c:\users\petku_000\documents\visual studio 2012\Projects\TankWinTablet\TankWinTablet\obj\Debug\App.g.cs
+c:\users\petku_000\documents\visual studio 2012\Projects\TankWinTablet\TankWinTablet\obj\Debug\Common\StandardStyles.g.i.cs
+c:\users\petku_000\documents\visual studio 2012\Projects\TankWinTablet\TankWinTablet\obj\Debug\Common\StandardStyles.g.cs
+c:\users\petku_000\documents\visual studio 2012\Projects\TankWinTablet\TankWinTablet\obj\Debug\MainPage.g.i.cs
+c:\users\petku_000\documents\visual studio 2012\Projects\TankWinTablet\TankWinTablet\obj\Debug\MainPage.g.cs
+c:\users\petku_000\documents\visual studio 2012\Projects\TankWinTablet\TankWinTablet\obj\Debug\XamlTypeInfo.g.cs
+c:\users\petku_000\documents\visual studio 2012\Projects\TankWinTablet\TankWinTablet\obj\Debug\App.xaml
+c:\users\petku_000\documents\visual studio 2012\Projects\TankWinTablet\TankWinTablet\obj\Debug\Common\StandardStyles.xaml
+c:\users\petku_000\documents\visual studio 2012\Projects\TankWinTablet\TankWinTablet\obj\Debug\MainPage.xaml
+c:\users\petku_000\documents\visual studio 2012\Projects\TankWinTablet\TankWinTablet\obj\Debug\TankWinTablet.exe
+c:\users\petku_000\documents\visual studio 2012\Projects\TankWinTablet\TankWinTablet\obj\Debug\TankWinTablet.pdb
+c:\users\petku_000\documents\visual studio 2012\Projects\TankWinTablet\TankWinTablet\obj\Debug\priconfig.xml
+c:\users\petku_000\documents\visual studio 2012\Projects\TankWinTablet\TankWinTablet\obj\Debug\layout.resfiles
+c:\users\petku_000\documents\visual studio 2012\Projects\TankWinTablet\TankWinTablet\obj\Debug\resources.resfiles
+c:\users\petku_000\documents\visual studio 2012\Projects\TankWinTablet\TankWinTablet\obj\Debug\pri.resfiles
+c:\users\petku_000\documents\visual studio 2012\Projects\TankWinTablet\TankWinTablet\obj\Debug\LanguageQualifiers.txt
+c:\users\petku_000\documents\visual studio 2012\Projects\TankWinTablet\TankWinTablet\obj\Debug\ProjectArchitectures.txt
+c:\users\petku_000\documents\visual studio 2012\Projects\TankWinTablet\TankWinTablet\obj\Debug\priconfig.xml.intermediate
+c:\users\petku_000\documents\visual studio 2012\Projects\TankWinTablet\TankWinTablet\obj\Debug\layout.resfiles.intermediate
+c:\users\petku_000\documents\visual studio 2012\Projects\TankWinTablet\TankWinTablet\obj\Debug\resources.resfiles.intermediate
+c:\users\petku_000\documents\visual studio 2012\Projects\TankWinTablet\TankWinTablet\obj\Debug\pri.resfiles.intermediate
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\bin\Debug\TankWinTablet.exe
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\bin\Debug\TankWinTablet.pdb
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\bin\Debug\resources.pri
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\bin\Debug\AppxManifest.xml
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\bin\Debug\TankWinTablet.build.appxrecipe
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\obj\Debug\App.g.i.cs
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\obj\Debug\App.g.cs
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\obj\Debug\Common\StandardStyles.g.i.cs
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\obj\Debug\Common\StandardStyles.g.cs
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\obj\Debug\MainPage.g.i.cs
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\obj\Debug\MainPage.g.cs
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\obj\Debug\XamlTypeInfo.g.cs
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\obj\Debug\App.xaml
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\obj\Debug\Common\StandardStyles.xaml
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\obj\Debug\MainPage.xaml
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\obj\Debug\TankWinTablet.exe
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\obj\Debug\TankWinTablet.pdb
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\obj\Debug\priconfig.xml.intermediate
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\obj\Debug\layout.resfiles.intermediate
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\obj\Debug\resources.resfiles.intermediate
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\obj\Debug\pri.resfiles.intermediate
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\obj\Debug\priconfig.xml
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\obj\Debug\layout.resfiles
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\obj\Debug\resources.resfiles
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\obj\Debug\pri.resfiles
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\obj\Debug\LanguageQualifiers.txt
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\obj\Debug\ProjectArchitectures.txt
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\obj\Debug\TankWinTablet.csprojResolveAssemblyReference.cache
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\bin\Debug\Microsoft.Threading.Tasks.dll
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\bin\Debug\Microsoft.Threading.Tasks.xml
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\obj\Debug\TankWinTablet.csproj.GenerateResource.Cache
