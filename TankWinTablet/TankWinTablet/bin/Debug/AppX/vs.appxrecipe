@@ -22,11 +22,11 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\bin\Debug\TankWinTablet.exe">
       <PackagePath>TankWinTablet.exe</PackagePath>
-      <Modified>2013-05-13T17:51:47.961</Modified>
+      <Modified>2013-05-14T14:31:51.371</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\bin\Debug\TankWinTablet.pdb">
       <PackagePath>TankWinTablet.pdb</PackagePath>
-      <Modified>2013-05-13T17:51:47.951</Modified>
+      <Modified>2013-05-14T14:31:51.358</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\packages\Microsoft.Bcl.Async.1.0.16\lib\win8\Microsoft.Threading.Tasks.dll">
       <PackagePath>Microsoft.Threading.Tasks.dll</PackagePath>
