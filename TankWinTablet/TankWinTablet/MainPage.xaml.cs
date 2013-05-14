@@ -125,25 +125,21 @@ namespace TankWinTablet
             {
                 movingForward = true;
                 sendTankCommand(tankForwardButtonAddress);
-                textBox.Text += tankForwardButtonAddress;
             }
             if (movingForward && y < 0)
             {
                 movingForward = false;
                 sendTankCommand(tankStopMovementButtonAddress);
-                textBox.Text += tankStopMovementButtonAddress;
             }
             if (!movingBackward && z > 0.3)
             {
                 movingBackward = true;
                 sendTankCommand(tankBackwardButtonAddress);
-                textBox.Text += tankBackwardButtonAddress;
             }
             if (movingBackward && z < 0)
             {
                 movingBackward = false;
                 sendTankCommand(tankStopMovementButtonAddress);
-                textBox.Text += tankStopMovementButtonAddress;
             }
             if (!rotatingLeft && x < -0.4)
             {
