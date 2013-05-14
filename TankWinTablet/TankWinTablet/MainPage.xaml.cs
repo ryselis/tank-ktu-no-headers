@@ -107,7 +107,7 @@ namespace TankWinTablet
                 timer.Tick+=main_timer_Tick;
                 timer.Start();
             }
-            catch (ArgumentException exc)
+            catch 
             {
                 _accelerometer = null;
                 textBox.Text = "phailed";
@@ -335,6 +335,94 @@ namespace TankWinTablet
         private void gunLiftButton_Copy_PointerExited(object sender, PointerRoutedEventArgs e)
         {
             sendTankCommand(tankStopMainGunMoveButtonAddress);
+            resetTankStates();
+        }
+
+        private void backButton_Copy_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            sendTankCommand(tankStopMovementButtonAddress);
+            resetTankStates();
+        }
+
+        private void backButton_Copy_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            sendTankCommand(tankStopMovementButtonAddress);
+            resetTankStates();
+        }
+
+        private void fireButton_Copy_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            sendTankCommand(tankStopMainGunFireButtonAddress);
+            resetTankStates();
+        }
+
+        private void fireButton_Copy_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            sendTankCommand(tankStopMainGunFireButtonAddress);
+            resetTankStates();
+        }
+
+        private void goRightButton_Copy_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            sendTankCommand(tankStopRotateButtonAddress);
+            resetTankStates();
+        }
+
+        private void goRightButton_Copy_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            sendTankCommand(tankStopRotateButtonAddress);
+            resetTankStates();
+        }
+
+        private void goLeftButton_Copy_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            sendTankCommand(tankStopRotateButtonAddress);
+            resetTankStates();
+        }
+
+        private void goLeftButton_Copy_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            sendTankCommand(tankStopRotateButtonAddress);
+            resetTankStates();
+        }
+
+        private void turretleftButton_Copy_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            sendTankCommand(tankStopRotateLeftTurretButtonAddress);
+            sendTankCommand(tankStopRotateRightTurretButtonAddress);
+            resetTankStates();
+        }
+
+        private void turretleftButton_Copy_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            sendTankCommand(tankStopRotateLeftTurretButtonAddress);
+            sendTankCommand(tankStopRotateRightTurretButtonAddress);
+            resetTankStates();
+        }
+
+        private void forwardButton_Copy_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            sendTankCommand(tankStopMovementButtonAddress);
+            resetTankStates();
+        }
+
+        private void forwardButton_Copy_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            sendTankCommand(tankStopMovementButtonAddress);
+            resetTankStates();
+        }
+
+        private void turretRightButton_Copy_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            sendTankCommand(tankStopRotateLeftTurretButtonAddress);
+            sendTankCommand(tankStopRotateRightTurretButtonAddress);
+            resetTankStates();
+        }
+
+        private void turretRightButton_Copy_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            sendTankCommand(tankStopRotateLeftTurretButtonAddress);
+            sendTankCommand(tankStopRotateRightTurretButtonAddress);
             resetTankStates();
         }
 
