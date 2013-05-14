@@ -15,9 +15,13 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="TankWinTablet.App">
-      <VisualElements DisplayName="TankWinTablet" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="TankWinTablet" ForegroundText="light" BackgroundColor="#464646">
+      <VisualElements DisplayName="TankWinTablet" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="TankWinTablet" ForegroundText="light" BackgroundColor="#151708">
         <DefaultTile ShowName="allLogos" />
-        <SplashScreen Image="Assets\SplashScreen.png" />
+        <SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#151708" />
+        <InitialRotationPreference>
+          <Rotation Preference="landscape" />
+          <Rotation Preference="landscapeFlipped" />
+        </InitialRotationPreference>
       </VisualElements>
     </Application>
   </Applications>

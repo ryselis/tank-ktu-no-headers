@@ -73,7 +73,7 @@ namespace TankWinTablet
         public String tankBackwardButtonAddress = tankIpAddress + "move/255";
         public String tankRotateRightButtonAddress = tankIpAddress + "rotate/255";
         public String tankRotateLeftButtonAddress = tankIpAddress + "rotate/0";
-        public String tankStopRotateButtonAddress = tankIpAddress + "rotate/127";
+        public String tankStopRotateButtonAddress = tankIpAddress + "rotate/128";
         public String tankRotateRightTurretButtonAddress = tankIpAddress + "turret/left/on";
         public String tankRotateLeftTurretButtonAddress = tankIpAddress + "turret/right/on";
         public String tankStopRotateRightTurretButtonAddress = tankIpAddress + "turret/right/off";
@@ -84,6 +84,7 @@ namespace TankWinTablet
         public String tankStopMainGunFireButtonAddress = tankIpAddress + "main_gun/fire/off";
         public bool canSend = true;
         private Accelerometer _accelerometer;
+        private int crashCount = 0;
 
         public MainPage()
         {
@@ -236,13 +237,27 @@ namespace TankWinTablet
 
         private void ReadWebRequestCallback(IAsyncResult callbackResult)
         {
-            HttpWebRequest myRequest = (HttpWebRequest)callbackResult.AsyncState;
-            HttpWebResponse myResponse = (HttpWebResponse)myRequest.EndGetResponse(callbackResult);
-
-            using (StreamReader httpwebStreamReader = new StreamReader(myResponse.GetResponseStream()))
+            while (true)
             {
-                string results = httpwebStreamReader.ReadToEnd();
+                try
+                {
+
+                    HttpWebRequest myRequest = (HttpWebRequest) callbackResult.AsyncState;
+                    HttpWebResponse myResponse = (HttpWebResponse) myRequest.EndGetResponse(callbackResult);
+
+                    using (StreamReader httpwebStreamReader = new StreamReader(myResponse.GetResponseStream()))
+                    {
+
+                        string results = httpwebStreamReader.ReadToEnd();
+                    }
+                    break;
+                }
+                catch
+                {
+                    textBox.Text = String.Format("{0}", ++crashCount);
+                }
             }
+
         }
 
         private void sendTankCommand(String tankCommand)
@@ -267,15 +282,6 @@ namespace TankWinTablet
             }
         }
 
-        private void gunButton_ClickNew(object sender, RoutedEventArgs e)
-        {
-            if (!movingMainGun)
-            {
-                sendTankCommand(tankMainGunMoveButtonAddress);
-                resetTankStates();
-                movingMainGun = true;
-            }
-        }
 
         private void fireButton_ClickNew(object sender, RoutedEventArgs e)
         {
