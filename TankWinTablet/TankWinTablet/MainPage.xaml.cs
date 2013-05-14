@@ -96,6 +96,7 @@ namespace TankWinTablet
             try
             {
                 _accelerometer = Accelerometer.GetDefault();
+                _accelerometer.ReportInterval = 1000;
                 _accelerometer.ReadingChanged += _accelerometer_ReadingChanged;
                 textBox.Text = "Reading event ok";
                 _accelerometer.Shaken += _accelerometer_Shaken;
@@ -126,7 +127,11 @@ namespace TankWinTablet
 
         void _accelerometer_ReadingChanged(Accelerometer sender, AccelerometerReadingChangedEventArgs args)
         {
-            
+            var reading = _accelerometer.GetCurrentReading();
+            var x = reading.AccelerationX;
+            var y = reading.AccelerationY;
+            var z = reading.AccelerationZ;
+            textBox.Text = String.Format("x: {0}, y: {1}, z:{2}", x, y, z);
         }
 
         private void startButton_ClickNew(object sender, RoutedEventArgs e)
