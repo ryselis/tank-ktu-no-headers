@@ -109,9 +109,9 @@ body
 	width: 130px;
 	height: 130px;
 	position: absolute;
-	bottom: 100px;
+	bottom: 40px;
 	left: 410px;
-   	background-image: url(../images/radarp.png);
+   	background: url(../images/radarp.png);
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
