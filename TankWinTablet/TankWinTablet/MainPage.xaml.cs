@@ -101,6 +101,7 @@ namespace TankWinTablet
                 textBox.Text = "Reading event ok";
                 _accelerometer.Shaken += _accelerometer_Shaken;
                 textBox.Text = "Skaen event ok";
+                textBox.Text = String.Format("{0}", _accelerometer.GetCurrentReading().AccelerationX);
             }
             catch (ArgumentException exc)
             {

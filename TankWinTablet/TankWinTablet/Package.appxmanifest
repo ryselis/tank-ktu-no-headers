@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  <Identity Name="db57348b-a81b-4060-9f1f-afefcdd44cba" Publisher="CN=petku_000" Version="1.0.0.4" />
+  <Identity Name="db57348b-a81b-4060-9f1f-afefcdd44cba" Publisher="CN=petku_000" Version="1.0.0.5" />
   <Properties>
     <DisplayName>TankWinTablet</DisplayName>
     <PublisherDisplayName>petku_000</PublisherDisplayName>

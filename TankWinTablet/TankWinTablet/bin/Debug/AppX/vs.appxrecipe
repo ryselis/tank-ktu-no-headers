@@ -5,28 +5,28 @@
     <WindowsUser>Karolis Ryselis</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <RegisteredManifestChecksum>41DFD74BDA473EA514B111BA98FAF946818932EE5A12301391706E14E842E01A</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>db57348b-a81b-4060-9f1f-afefcdd44cba_1.0.0.3_neutral__az45n8jtjgq20</RegisteredPackageMoniker>
+    <RegisteredManifestChecksum>E30CABAE5D5ECDDA4AA381AB9CE43D4340093130392DDE4C79463C7350889063</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>db57348b-a81b-4060-9f1f-afefcdd44cba_1.0.0.4_neutral__az45n8jtjgq20</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>db57348b-a81b-4060-9f1f-afefcdd44cba_az45n8jtjgq20!App</RegisteredUserModeAppID>
     <RegisteredPackageID>db57348b-a81b-4060-9f1f-afefcdd44cba</RegisteredPackageID>
     <RegisteredPackagePublisher>CN=petku_000</RegisteredPackagePublisher>
-    <RegisteredVersion>1.0.0.3</RegisteredVersion>
+    <RegisteredVersion>1.0.0.4</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Projects\tank-ktu-no-headers\TankWinTablet\TankWinTablet\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-05-14T16:40:01.636</Modified>
+      <Modified>2013-05-14T16:43:16.012</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Projects\tank-ktu-no-headers\TankWinTablet\TankWinTablet\bin\Debug\TankWinTablet.exe">
       <PackagePath>TankWinTablet.exe</PackagePath>
-      <Modified>2013-05-14T16:42:45.316</Modified>
+      <Modified>2013-05-14T16:45:06.548</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\tank-ktu-no-headers\TankWinTablet\TankWinTablet\bin\Debug\TankWinTablet.pdb">
       <PackagePath>TankWinTablet.pdb</PackagePath>
-      <Modified>2013-05-14T16:42:45.254</Modified>
+      <Modified>2013-05-14T16:45:06.466</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\tank-ktu-no-headers\TankWinTablet\packages\Microsoft.Bcl.Async.1.0.16\lib\win8\Microsoft.Threading.Tasks.dll">
       <PackagePath>Microsoft.Threading.Tasks.dll</PackagePath>
@@ -78,7 +78,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\tank-ktu-no-headers\TankWinTablet\TankWinTablet\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2013-05-14T16:40:01.553</Modified>
+      <Modified>2013-05-14T16:43:15.942</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
