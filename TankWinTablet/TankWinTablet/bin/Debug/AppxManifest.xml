@@ -7,7 +7,7 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="db57348b-a81b-4060-9f1f-afefcdd44cba" Publisher="CN=petku_000" Version="1.0.0.3" ProcessorArchitecture="neutral" />
+  <Identity Name="db57348b-a81b-4060-9f1f-afefcdd44cba" Publisher="CN=petku_000" Version="1.0.0.4" ProcessorArchitecture="neutral" />
   <Properties>
     <DisplayName>TankWinTablet</DisplayName>
     <PublisherDisplayName>petku_000</PublisherDisplayName>

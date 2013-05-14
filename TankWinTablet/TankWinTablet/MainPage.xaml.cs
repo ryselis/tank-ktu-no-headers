@@ -96,7 +96,7 @@ namespace TankWinTablet
             try
             {
                 _accelerometer = Accelerometer.GetDefault();
-                _accelerometer.ReportInterval = 1000;
+                _accelerometer.ReportInterval = 10;
                 _accelerometer.ReadingChanged += _accelerometer_ReadingChanged;
                 textBox.Text = "Reading event ok";
                 _accelerometer.Shaken += _accelerometer_Shaken;

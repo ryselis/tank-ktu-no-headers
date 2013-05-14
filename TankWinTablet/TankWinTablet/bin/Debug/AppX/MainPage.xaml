@@ -18,7 +18,7 @@
         <Button x:Name="backButton" Content="Back" HorizontalAlignment="Left" Margin="127,489,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.47,0.447"/>
         <Button x:Name="fireButton" Content="Fire" HorizontalAlignment="Left" Margin="134,446,0,0" VerticalAlignment="Top" Background="#FFCD1E1E"/>
         <ListView HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="159,195,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="159,195,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="840"/>
         <Button x:ConnectionId='2' x:Name="turretleftButton_Copy" Content="Turret Left" HorizontalAlignment="Left" Margin="14,597,0,0" VerticalAlignment="Top"                                  />
         <Button x:ConnectionId='3' x:Name="forwardButton_Copy" Content="Forward" HorizontalAlignment="Left" Margin="112,597,0,0" VerticalAlignment="Top"                                />
         <Button x:ConnectionId='4' x:Name="turretRightButton_Copy" Content="Turret Right" HorizontalAlignment="Left" Margin="206,597,0,0" VerticalAlignment="Top"                                   />
