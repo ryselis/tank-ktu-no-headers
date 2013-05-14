@@ -97,7 +97,9 @@ namespace TankWinTablet
             {
                 _accelerometer = Accelerometer.GetDefault();
                 _accelerometer.ReadingChanged += _accelerometer_ReadingChanged;
+                textBox.Text = "Reading event ok";
                 _accelerometer.Shaken += _accelerometer_Shaken;
+                textBox.Text = "Skaen event ok";
             }
             catch (ArgumentException exc)
             {
@@ -107,6 +109,7 @@ namespace TankWinTablet
 
         void _accelerometer_Shaken(Accelerometer sender, AccelerometerShakenEventArgs args)
         {
+            textBox.Text = "Shaken!!!!";
             sendTankCommand(tankMainGunFireButtonAddress);
             DispatcherTimer timer = new DispatcherTimer();
             timer.Interval = new TimeSpan( 0, 0, 0, 2, 0);

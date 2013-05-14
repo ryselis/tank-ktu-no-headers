@@ -5,7 +5,7 @@
     <WindowsUser>Karolis Ryselis</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <RegisteredManifestChecksum>DD563DDEA05DE73B84C99E0F187316FE1491291A79D06E8FD296E2CD294885F1</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>108BE86CD4E0111649C996892500A13667951ED79DA543BB53810CEE636AAFFC</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>db57348b-a81b-4060-9f1f-afefcdd44cba_1.0.0.0_neutral__az45n8jtjgq20</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>db57348b-a81b-4060-9f1f-afefcdd44cba_az45n8jtjgq20!App</RegisteredUserModeAppID>
     <RegisteredPackageID>db57348b-a81b-4060-9f1f-afefcdd44cba</RegisteredPackageID>
@@ -16,17 +16,17 @@
     <AppXManifest Include="C:\Projects\tank-ktu-no-headers\TankWinTablet\TankWinTablet\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-05-14T14:42:39.188</Modified>
+      <Modified>2013-05-14T16:09:09.710</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Projects\tank-ktu-no-headers\TankWinTablet\TankWinTablet\bin\Debug\TankWinTablet.exe">
       <PackagePath>TankWinTablet.exe</PackagePath>
-      <Modified>2013-05-14T15:36:02.101</Modified>
+      <Modified>2013-05-14T16:09:09.614</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\tank-ktu-no-headers\TankWinTablet\TankWinTablet\bin\Debug\TankWinTablet.pdb">
       <PackagePath>TankWinTablet.pdb</PackagePath>
-      <Modified>2013-05-14T15:36:02.014</Modified>
+      <Modified>2013-05-14T16:09:09.598</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Projects\tank-ktu-no-headers\TankWinTablet\packages\Microsoft.Bcl.Async.1.0.16\lib\win8\Microsoft.Threading.Tasks.dll">
       <PackagePath>Microsoft.Threading.Tasks.dll</PackagePath>
