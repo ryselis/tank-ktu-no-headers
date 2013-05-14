@@ -13,6 +13,8 @@
         </Grid.Background>
         <Button x:Name="onOffButton" Content="On/Off" HorizontalAlignment="Left" Margin="120,554,0,0" VerticalAlignment="Top" Click="startButton_ClickNew"/>
         <ListView HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100"/>
+
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="159,195,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="840"/>
         <Button x:Name="turretleftButton_Copy" Content="Turret Left" HorizontalAlignment="Left" Margin="14,597,0,0" VerticalAlignment="Top" Click="turretLeftButton_ClickNew"/>
         <Button x:Name="forwardButton_Copy" Content="Forward" HorizontalAlignment="Left" Margin="112,597,0,0" VerticalAlignment="Top" Click="forwardButton_ClickNew" />
         <Button x:Name="turretRightButton_Copy" Content="Turret Right" HorizontalAlignment="Left" Margin="206,597,0,0" VerticalAlignment="Top" Click="turretRightButton_ClickNew"/>

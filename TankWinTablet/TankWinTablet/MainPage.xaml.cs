@@ -6,8 +6,10 @@ using System.Net;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
+using Windows.Devices.Sensors;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -15,6 +17,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using System.Threading;
 
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
@@ -80,10 +83,56 @@ namespace TankWinTablet
         public String tankMainGunFireButtonAddress = tankIpAddress + "main_gun/fire/on";
         public String tankStopMainGunFireButtonAddress = tankIpAddress + "main_gun/fire/off";
         public bool canSend = true;
+        private Accelerometer _accelerometer;
 
         public MainPage()
         {
-            this.InitializeComponent();
+            this.InitializeComponent(); 
+            InitializeAccelerometer();
+        }
+
+        private void InitializeAccelerometer()
+        {
+            try
+            {
+                _accelerometer = Accelerometer.GetDefault();
+                _accelerometer.ReportInterval = 10;
+                _accelerometer.ReadingChanged += _accelerometer_ReadingChanged;
+                textBox.Text = "Reading event ok";
+                _accelerometer.Shaken += _accelerometer_Shaken;
+                textBox.Text = "Skaen event ok";
+                textBox.Text = String.Format("{0}", _accelerometer.GetCurrentReading().AccelerationX);
+            }
+            catch (ArgumentException exc)
+            {
+                _accelerometer = null;
+                textBox.Text = "phailed";
+            }
+        }
+
+        void _accelerometer_Shaken(Accelerometer sender, AccelerometerShakenEventArgs args)
+        {
+            textBox.Text = "Shaken!!!!";
+            sendTankCommand(tankMainGunFireButtonAddress);
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = new TimeSpan( 0, 0, 0, 2, 0);
+            timer.Tick += timer_Tick;
+        }
+
+        void timer_Tick(object sender, object e)
+        {
+            DispatcherTimer timer = sender as DispatcherTimer;
+            timer.Stop();
+            sendTankCommand(tankStopMainGunFireButtonAddress);
+        }
+
+        void _accelerometer_ReadingChanged(Accelerometer sender, AccelerometerReadingChangedEventArgs args)
+        {
+            var reading = _accelerometer.GetCurrentReading();
+            var x = reading.AccelerationX;
+            var y = reading.AccelerationY;
+            var z = reading.AccelerationZ;
+            textBox.Text = String.Format("x: {0}, y: {1}, z:{2}", x, y, z);
         }
 
         private void startButton_ClickNew(object sender, RoutedEventArgs e)
