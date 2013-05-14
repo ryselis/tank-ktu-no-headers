@@ -121,7 +121,11 @@
     <None Include="TankWinTablet_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\interface-pad-tank.png" />
     <Content Include="Assets\Logo.png" />
+    <Content Include="Assets\original1.png" />
+    <Content Include="Assets\original2.png" />
+    <Content Include="Assets\Shoot.png" />
     <Content Include="Assets\SmallLogo.png" />
     <Content Include="Assets\SplashScreen.png" />
     <Content Include="Assets\StoreLogo.png" />
