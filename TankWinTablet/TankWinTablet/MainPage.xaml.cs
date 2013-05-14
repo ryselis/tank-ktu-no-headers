@@ -145,22 +145,22 @@ namespace TankWinTablet
                 sendTankCommand(tankStopMovementButtonAddress);
                 textBox.Text += tankStopMovementButtonAddress;
             }
-            if (!rotatingLeft && x < -4)
+            if (!rotatingLeft && x < -0.4)
             {
                 rotatingLeft = true;
                 sendTankCommand(tankRotateLeftButtonAddress);
             }
-            if (rotatingLeft && x > -2)
+            if (rotatingLeft && x > -0.2)
             {
                 rotatingLeft = false;
                 sendTankCommand(tankStopRotateButtonAddress);
             }
-            if (!rotatingRight && x > 4)
+            if (!rotatingRight && x > 0.4)
             {
                 rotatingRight = true;
                 sendTankCommand(tankRotateRightButtonAddress);
             }
-            if (rotatingRight && x < 2)
+            if (rotatingRight && x < 0.2)
             {
                 rotatingRight = false;
                 sendTankCommand(tankStopRotateButtonAddress);
