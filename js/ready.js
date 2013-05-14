@@ -15,6 +15,8 @@ $(document).ready(function() {
 	$("#tankShoot").mouseup(function(e) {
 		turretMove("cannon_on", false);
 	})
+	
+	startRadarAnimation();
 
 	var on = false;
 	$("#tankPower").mousedown(function(e) {
