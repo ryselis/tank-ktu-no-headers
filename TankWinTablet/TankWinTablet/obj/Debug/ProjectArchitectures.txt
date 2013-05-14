@@ -1,1 +1,1 @@
-C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\TankWinTablet.csproj;neutral
+C:\Projects\tank-ktu-no-headers\TankWinTablet\TankWinTablet\TankWinTablet.csproj;neutral
