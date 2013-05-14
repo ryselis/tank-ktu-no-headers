@@ -26,7 +26,7 @@ function createAudio()
 
 function ipwajax(cmd)
 {
-    $.ajax({url: "http://192.168.0.104:8080/"+cmd});
+    $.ajax({url: "http://192.168.0.105:8080/"+cmd});
 }
 
 function openRemote() 
@@ -70,7 +70,7 @@ function initJsAq()
 function loadFeed() {
   working.css("zIndex", -1);
   working.load(loadImage);
-  working.attr("src","http://192.168.0.104:8080/shot.jpg?rnd="+Math.floor(Math.random()*1000000));
+  working.attr("src","http://192.168.0.105:8080/shot.jpg?rnd="+Math.floor(Math.random()*1000000));
 }
 
 function onJsResize() {
