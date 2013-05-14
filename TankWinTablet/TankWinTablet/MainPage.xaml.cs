@@ -104,6 +104,7 @@ namespace TankWinTablet
             catch (ArgumentException exc)
             {
                 _accelerometer = null;
+                textBox.Text = "phailed";
             }
         }
 
