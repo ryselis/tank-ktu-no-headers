@@ -117,6 +117,11 @@ namespace TankWinTablet
 
         private void stopButton_ClickNew(object sender, RoutedEventArgs e)
         {
+            stopEvents();
+        }
+
+        private void stopEvents()
+        {
             sendTankCommand(tankStopMovementButtonAddress);
             sendTankCommand(tankStopRotateButtonAddress);
             sendTankCommand(tankStopRotateLeftTurretButtonAddress);
@@ -176,7 +181,6 @@ namespace TankWinTablet
             {
                 string results = httpwebStreamReader.ReadToEnd();
             }
-           
         }
 
         private void sendTankCommand(String tankCommand)
@@ -220,5 +224,34 @@ namespace TankWinTablet
                 firingMainGun = true;
             }
         }
+
+        private void tankBodyImage_DragEnter(object sender, DragEventArgs e)
+        {
+         
+        }
+
+        private void gunLiftButton_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            if (!movingMainGun)
+            {
+                sendTankCommand(tankMainGunMoveButtonAddress);
+                resetTankStates();
+                movingMainGun = true;
+            }
+        }
+
+        private void gunLiftButton_Copy_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            sendTankCommand(tankStopMainGunMoveButtonAddress);
+            resetTankStates();
+        }
+
+        private void gunLiftButton_Copy_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            sendTankCommand(tankStopMainGunMoveButtonAddress);
+            resetTankStates();
+        }
+
+
     }
 }
