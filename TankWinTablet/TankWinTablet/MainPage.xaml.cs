@@ -102,12 +102,25 @@ namespace TankWinTablet
                 _accelerometer.Shaken += _accelerometer_Shaken;
                 textBox.Text = "Skaen event ok";
                 textBox.Text = String.Format("{0}", _accelerometer.GetCurrentReading().AccelerationX);
+                DispatcherTimer timer = new DispatcherTimer();
+                timer.Interval = new TimeSpan(0,0,0,0,70);
+                timer.Tick+=main_timer_Tick;
+
             }
             catch (ArgumentException exc)
             {
                 _accelerometer = null;
                 textBox.Text = "phailed";
             }
+        }
+
+        private void main_timer_Tick(object sender, object e)
+        {
+            var reading = _accelerometer.GetCurrentReading();
+            var x = reading.AccelerationX;
+            var y = reading.AccelerationY;
+            var z = reading.AccelerationZ;
+            textBox.Text = String.Format("x: {0}, y: {1}, z:{2}", x, y, z);
         }
 
         void _accelerometer_Shaken(Accelerometer sender, AccelerometerShakenEventArgs args)
