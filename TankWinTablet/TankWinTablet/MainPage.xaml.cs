@@ -73,7 +73,7 @@ namespace TankWinTablet
         public String tankBackwardButtonAddress = tankIpAddress + "move/255";
         public String tankRotateRightButtonAddress = tankIpAddress + "rotate/255";
         public String tankRotateLeftButtonAddress = tankIpAddress + "rotate/0";
-        public String tankStopRotateButtonAddress = tankIpAddress + "rotate/127";
+        public String tankStopRotateButtonAddress = tankIpAddress + "rotate/128";
         public String tankRotateRightTurretButtonAddress = tankIpAddress + "turret/left/on";
         public String tankRotateLeftTurretButtonAddress = tankIpAddress + "turret/right/on";
         public String tankStopRotateRightTurretButtonAddress = tankIpAddress + "turret/right/off";
