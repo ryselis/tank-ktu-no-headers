@@ -92,7 +92,6 @@ body
 	top:10px;
 	left:10px;
 	background: url(../images/tankPower.png);
-	z-index: 3;
 }
 
 #accelerometerSwitch {
@@ -102,7 +101,6 @@ body
 	top:10px;
 	right:10px;
 	background: url(../images/tankPower.png);
-	z-index: 3;
 }
 
 #radar {
