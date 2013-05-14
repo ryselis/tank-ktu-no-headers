@@ -84,16 +84,6 @@ body
     z-index: 2;
 }
 
-#speedPedal {
-	position:absolute;
-    width:47px;
-    height:94px;
-    bottom:10px;
-    left:10px;
-    background: url(../images/pedal.png);
-    cursor: pointer;
-}
-
 #tankPower {
 	position:absolute;
 	width:75px;

@@ -205,7 +205,6 @@ function tankMove(move, state) {
 					//$('#stateF').text(forwardcount);
 					break;
 				case 'forward_fast':
-					setPedalPosition(0);
 					request('move/55');
 					MoveTankImageUp();
 					forwardcount++;
@@ -218,7 +217,6 @@ function tankMove(move, state) {
 					//$('#stateB').text(backcoutn);
 					break;
 				case 'back_fast':
-					setPedalPosition(0);
 					request('move/200');
 					MoveTankImageDown();
 					backcoutn++;
@@ -306,17 +304,6 @@ function turretMove(side, state) {
 
 		prevEventTurret = side;
 		prevStateTurret = state;
-	}
-}
-
-var shiftDown = false;
-function setPedalPosition(pos) {
-	if (pos == 1) {
-		$('#speedPedal').css("background", "url(images/pedal.png) 0 94px");
-		shiftDown = true;
-	} else {
-		$('#speedPedal').css("background", "url(images/pedal.png) 0 0");
-		shiftDown = false;
 	}
 }
 
