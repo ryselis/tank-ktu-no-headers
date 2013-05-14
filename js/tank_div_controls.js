@@ -305,5 +305,5 @@ function turretMove(side, state) {
 		prevEventTurret = side;
 		prevStateTurret = state;
 	}
-}
+}}
 
