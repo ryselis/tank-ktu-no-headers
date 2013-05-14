@@ -121,7 +121,7 @@ namespace TankWinTablet
             var y = reading.AccelerationY;
             var z = reading.AccelerationZ;
             textBox.Text = String.Format("x: {0}, y: {1}, z:{2}", x, y, z);
-            if (!movingForward && y > 0.6)
+            if (!movingForward && y > 0.2)
             {
                 movingForward = true;
                 sendTankCommand(tankForwardButtonAddress);
@@ -144,6 +144,26 @@ namespace TankWinTablet
                 movingBackward = false;
                 sendTankCommand(tankStopMovementButtonAddress);
                 textBox.Text += tankStopMovementButtonAddress;
+            }
+            if (!rotatingLeft && x < -4)
+            {
+                rotatingLeft = true;
+                sendTankCommand(tankRotateLeftButtonAddress);
+            }
+            if (rotatingLeft && x > -2)
+            {
+                rotatingLeft = false;
+                sendTankCommand(tankStopRotateButtonAddress);
+            }
+            if (!rotatingRight && x > 4)
+            {
+                rotatingRight = true;
+                sendTankCommand(tankRotateRightButtonAddress);
+            }
+            if (rotatingRight && x < 2)
+            {
+                rotatingRight = false;
+                sendTankCommand(tankStopRotateButtonAddress);
             }
         }
 
