@@ -122,6 +122,46 @@ namespace TankWinTablet
             var y = reading.AccelerationY;
             var z = reading.AccelerationZ;
             textBox.Text = String.Format("x: {0}, y: {1}, z:{2}", x, y, z);
+            if (!movingForward && y > 0.2)
+            {
+                movingForward = true;
+                sendTankCommand(tankForwardButtonAddress);
+            }
+            if (movingForward && y < 0)
+            {
+                movingForward = false;
+                sendTankCommand(tankStopMovementButtonAddress);
+            }
+            if (!movingBackward && z > 0.3)
+            {
+                movingBackward = true;
+                sendTankCommand(tankBackwardButtonAddress);
+            }
+            if (movingBackward && z < 0)
+            {
+                movingBackward = false;
+                sendTankCommand(tankStopMovementButtonAddress);
+            }
+            if (!rotatingLeft && x < -0.4)
+            {
+                rotatingLeft = true;
+                sendTankCommand(tankRotateLeftButtonAddress);
+            }
+            if (rotatingLeft && x > -0.2)
+            {
+                rotatingLeft = false;
+                sendTankCommand(tankStopRotateButtonAddress);
+            }
+            if (!rotatingRight && x > 0.4)
+            {
+                rotatingRight = true;
+                sendTankCommand(tankRotateRightButtonAddress);
+            }
+            if (rotatingRight && x < 0.2)
+            {
+                rotatingRight = false;
+                sendTankCommand(tankStopRotateButtonAddress);
+            }
         }
 
         void _accelerometer_Shaken(Accelerometer sender, AccelerometerShakenEventArgs args)
