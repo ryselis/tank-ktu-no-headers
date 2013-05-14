@@ -121,7 +121,7 @@ namespace TankWinTablet
             var x = reading.AccelerationX;
             var y = reading.AccelerationY;
             var z = reading.AccelerationZ;
-            textBox.Text = String.Format("x: {0}, y: {1}, z:{2}", x, y, z);
+            //textBox.Text = String.Format("x: {0}, y: {1}, z:{2}", x, y, z);
             if (!movingForward && y > 0.2)
             {
                 movingForward = true;
