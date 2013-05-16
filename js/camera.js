@@ -1,6 +1,6 @@
 
-// COPYRIGHT (c) 2010 Pavel Khlebovich
-// Contact me at pas.anddev@gmail.com if you want to use parts of this code in your application or website
+
+streamUrl = "http://192.168.0.106:8080/";
 function createAudio()
 {
   $("#jplayer").jPlayer({
@@ -26,7 +26,7 @@ function createAudio()
 
 function ipwajax(cmd)
 {
-    $.ajax({url: "http://192.168.0.106:8080/"+cmd});
+    $.ajax({url: streamUrl+cmd});
 }
 
 function openRemote() 
@@ -70,7 +70,7 @@ function initJsAq()
 function loadFeed() {
   working.css("zIndex", -1);
   working.load(loadImage);
-  working.attr("src","http://192.168.0.106:8080/shot.jpg?rnd="+Math.floor(Math.random()*1000000));
+  working.attr("src",streamUrl+"shot.jpg?rnd="+Math.floor(Math.random()*1000000));
 }
 
 function onJsResize() {
