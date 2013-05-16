@@ -83,3 +83,17 @@ body
 	left:10px;
 	background: url(../images/tankPower.png);
 }
+
+#radar {
+	width: 130px;
+	height: 130px;
+	position: absolute;
+	bottom: 40px;
+	left: 600px;
+   	background: url(../images/radarp.png);
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: 550;
+}
