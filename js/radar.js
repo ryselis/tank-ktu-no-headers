@@ -1,5 +1,5 @@
 function startRadarAnimation() {
-	    var frameHeight = 130;
+	    var frameHeight = 80;
 	    var frames = 8;
 	    var frame = 0;
 	    setInterval(function () {
