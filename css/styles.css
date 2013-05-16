@@ -45,7 +45,7 @@ body
 	height: 304px;
 	position:absolute;
 	bottom: 50px;
-	right: 80px;
+	right: 90px;
     background: url(../images/Body.png) no-repeat;
     z-index: 3;
 }
@@ -104,11 +104,11 @@ body
 }
 
 #radar {
-	width: 80px;
-	height: 80px;
+	width: 90px;
+	height: 90px;
 	position: absolute;
 	bottom: 40px;
-	left: 420px;
+	left: 430px;
    	background: url(../images/radarp.png);
 	-webkit-background-size: cover;
     -moz-background-size: cover;
