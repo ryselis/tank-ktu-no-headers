@@ -62,6 +62,10 @@ namespace TankWinTablet
         public Boolean movingBackward = false;
         public Boolean rotatingRight = false;
         public Boolean rotatingLeft = false;
+        public Boolean movingForwardAccelerometer = false;
+        public Boolean movingBackwardAccelerometer = false;
+        public Boolean rotatingRightAccelerometer = false;
+        public Boolean rotatingLeftAccelerometer = false;
         public Boolean rotatingTurretLeft = false;
         public Boolean rotatingTurretRight = false;
         public Boolean movingMainGun = false;
@@ -123,44 +127,44 @@ namespace TankWinTablet
             var y = reading.AccelerationY;
             var z = reading.AccelerationZ;
             //textBox.Text = String.Format("x: {0}, y: {1}, z:{2}", x, y, z);
-            if (!movingForward && y > 0.2)
+            if (!movingForwardAccelerometer && y > 0.2)
             {
-                movingForward = true;
+                movingForwardAccelerometer = true;
                 sendTankCommand(tankForwardButtonAddress);
             }
-            if (movingForward && y < 0)
+            if (movingForwardAccelerometer && y < 0)
             {
-                movingForward = false;
+                movingForwardAccelerometer = false;
                 sendTankCommand(tankStopMovementButtonAddress);
             }
-            if (!movingBackward && z > 0.3)
+            if (!movingBackwardAccelerometer && z > 0.3)
             {
-                movingBackward = true;
+                movingBackwardAccelerometer = true;
                 sendTankCommand(tankBackwardButtonAddress);
             }
-            if (movingBackward && z < 0)
+            if (movingBackwardAccelerometer && z < 0)
             {
-                movingBackward = false;
+                movingBackwardAccelerometer = false;
                 sendTankCommand(tankStopMovementButtonAddress);
             }
-            if (!rotatingLeft && x < -0.4)
+            if (!rotatingLeftAccelerometer && x < -0.4)
             {
-                rotatingLeft = true;
+                rotatingLeftAccelerometer = true;
                 sendTankCommand(tankRotateLeftButtonAddress);
             }
-            if (rotatingLeft && x > -0.2)
+            if (rotatingLeftAccelerometer && x > -0.2)
             {
-                rotatingLeft = false;
+                rotatingLeftAccelerometer = false;
                 sendTankCommand(tankStopRotateButtonAddress);
             }
-            if (!rotatingRight && x > 0.4)
+            if (!rotatingRightAccelerometer && x > 0.4)
             {
-                rotatingRight = true;
+                rotatingRightAccelerometer = true;
                 sendTankCommand(tankRotateRightButtonAddress);
             }
-            if (rotatingRight && x < 0.2)
+            if (rotatingRightAccelerometer && x < 0.2)
             {
-                rotatingRight = false;
+                rotatingRightAccelerometer = false;
                 sendTankCommand(tankStopRotateButtonAddress);
             }
         }
@@ -468,6 +472,8 @@ namespace TankWinTablet
         private void controlImage_PointerExited(object sender, PointerRoutedEventArgs e)
         {
             ChangeImageBackground(controlImage, "Forward");
+            sendTankCommand(tankStopMovementButtonAddress);
+            resetTankStates();
         }
 
         private void controlImage_Tapped(object sender, TappedRoutedEventArgs e)
@@ -492,12 +498,5 @@ namespace TankWinTablet
             sendTankCommand(tankStopMovementButtonAddress);
             resetTankStates();
         }
-
-
-
-
-
-
-
     }
 }
