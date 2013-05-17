@@ -42,12 +42,12 @@ function onDeviceMotion(event) {
 			}
 		}
 
-		if (accelerationY > 4 && accelerationZ < -4) {
+		if (accelerationY > 6 && accelerationZ < -4) {
 			//$('#stateL').text('left_fast true');
 			tankMove('left_fast', true);
 			movesLeft = true;
 		} else { 
-			if (accelerationY > 2 && accelerationZ < -4) {
+			if (accelerationY > 4 && accelerationZ < -4) {
 				//$('#stateL').text('left true');
 				tankMove('left', true);
 				movesLeft = true;
@@ -58,12 +58,12 @@ function onDeviceMotion(event) {
 			}
 		}
 		
-		if (accelerationY < -4 && accelerationZ < -4) {
+		if (accelerationY < -6 && accelerationZ < -4) {
 			//$('#stateR').text('right_fast true');
 			tankMove('right_fast', true);
 			movesRight = true;
 		} else {
-			if (accelerationY < -2 && accelerationZ < -4) {
+			if (accelerationY < -4 && accelerationZ < -4) {
 				//$('#stateR').text('right true');
 				tankMove('right', true);
 				movesRight = true;
