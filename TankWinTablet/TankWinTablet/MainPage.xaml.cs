@@ -260,8 +260,8 @@ namespace TankWinTablet
         private void controlImage_PointerExited(object sender, PointerRoutedEventArgs e)
         {
             ChangeImageBackground(ForwardButtonImage, "Forward");
-            sendTankCommand(tankStopMovementButtonAddress);
-            resetTankStates();
+         //   sendTankCommand(tankStopMovementButtonAddress);
+         //   resetTankStates();
         }
 
         private void controlImage_Tapped(object sender, TappedRoutedEventArgs e)
@@ -295,9 +295,9 @@ namespace TankWinTablet
         private void turretLeftImageButton_PointerExited(object sender, PointerRoutedEventArgs e)
         {
             ChangeImageBackground(turretLeftImageButton, "TLeft");
-            sendTankCommand(tankStopRotateLeftTurretButtonAddress);
-            sendTankCommand(tankStopRotateRightTurretButtonAddress);
-            resetTankStates();
+          //  sendTankCommand(tankStopRotateLeftTurretButtonAddress);
+          //  sendTankCommand(tankStopRotateRightTurretButtonAddress);
+          //  resetTankStates();
         }
 
         private void turretLeftImageButton_PointerPressed(object sender, PointerRoutedEventArgs e)
@@ -327,9 +327,9 @@ namespace TankWinTablet
         private void turretRightImageButton_PointerExited(object sender, PointerRoutedEventArgs e)
         {
             ChangeImageBackground(turretRightImageButton, "TRight");
-            sendTankCommand(tankStopRotateLeftTurretButtonAddress);
-            sendTankCommand(tankStopRotateRightTurretButtonAddress);
-            resetTankStates();
+          //  sendTankCommand(tankStopRotateLeftTurretButtonAddress);
+          //  sendTankCommand(tankStopRotateRightTurretButtonAddress);
+          //  resetTankStates();
         }
 
         private void turretRightImageButton_PointerPressed(object sender, PointerRoutedEventArgs e)
@@ -380,8 +380,8 @@ namespace TankWinTablet
         private void leftImageButton_PointerExited(object sender, PointerRoutedEventArgs e)
         {
             ChangeImageBackground(leftImageButton, "Left");
-            sendTankCommand(tankStopRotateButtonAddress);
-            resetTankStates();
+           // sendTankCommand(tankStopRotateButtonAddress);
+           // resetTankStates();
         }
 
         private void leftImageButton_PointerPressed(object sender, PointerRoutedEventArgs e)
@@ -410,8 +410,8 @@ namespace TankWinTablet
         private void rightImageButton_PointerExited(object sender, PointerRoutedEventArgs e)
         {
             ChangeImageBackground(rightImageButton, "Right");
-            sendTankCommand(tankStopRotateButtonAddress);
-            resetTankStates();
+           // sendTankCommand(tankStopRotateButtonAddress);
+           // resetTankStates();
         }
 
         private void rightImageButton_PointerPressed(object sender, PointerRoutedEventArgs e)
@@ -440,8 +440,8 @@ namespace TankWinTablet
         private void backImageButton_PointerExited(object sender, PointerRoutedEventArgs e)
         {
             ChangeImageBackground(backImageButton, "Back");
-            sendTankCommand(tankStopMovementButtonAddress);
-            resetTankStates();
+           // sendTankCommand(tankStopMovementButtonAddress);
+           // resetTankStates();
         }
 
         private void backImageButton_PointerPressed(object sender, PointerRoutedEventArgs e)
@@ -470,8 +470,8 @@ namespace TankWinTablet
         private void gunLiftImageButton_PointerExited(object sender, PointerRoutedEventArgs e)
         {
             ChangeImageBackground(gunLiftImageButton, "GLift");
-            sendTankCommand(tankStopMainGunMoveButtonAddress);
-            resetTankStates();
+            //sendTankCommand(tankStopMainGunMoveButtonAddress);
+            //resetTankStates();
         }
 
         private void gunLiftImageButton_PointerPressed(object sender, PointerRoutedEventArgs e)
@@ -500,8 +500,8 @@ namespace TankWinTablet
         private void fireImageButton_PointerExited(object sender, PointerRoutedEventArgs e)
         {
             ChangeImageBackground(fireImageButton, "CFire");
-            sendTankCommand(tankStopMainGunFireButtonAddress);
-            resetTankStates();
+            //sendTankCommand(tankStopMainGunFireButtonAddress);
+            //resetTankStates();
         }
 
         private void fireImageButton_PointerPressed(object sender, PointerRoutedEventArgs e)
