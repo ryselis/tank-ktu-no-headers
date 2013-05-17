@@ -37,6 +37,18 @@
     <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\Assets\Back_On.png">
       <PackagePath>Assets\Back_On.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\Assets\button-off-push.png">
+      <PackagePath>Assets\button-off-push.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\Assets\button-off.png">
+      <PackagePath>Assets\button-off.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\Assets\button-on-push.png">
+      <PackagePath>Assets\button-on-push.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\Assets\button-on.png">
+      <PackagePath>Assets\button-on.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\Assets\CFire.png">
       <PackagePath>Assets\CFire.png</PackagePath>
     </AppxPackagedFile>
@@ -115,6 +127,12 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\Assets\TRight_On.png">
       <PackagePath>Assets\TRight_On.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\Assets\update-interface.png">
+      <PackagePath>Assets\update-interface.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\Assets\VIDEO.png">
+      <PackagePath>Assets\VIDEO.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\bin\Debug\App.xaml">
       <PackagePath>App.xaml</PackagePath>

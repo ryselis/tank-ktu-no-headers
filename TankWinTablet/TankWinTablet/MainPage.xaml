@@ -9,27 +9,20 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="Assets/interface-pad-tank.png"/>
+            <ImageBrush ImageSource="Assets/VIDEO.png"/>
         </Grid.Background>
-        <Button x:Name="onOffButton" Content="On/Off" HorizontalAlignment="Left" Margin="141,573,0,0" VerticalAlignment="Top" Click="startButton_ClickNew" Style="{StaticResource TextPrimaryButtonStyle}"/>
+        <WebView x:Name="webView" HorizontalAlignment="Left" Height="490" Margin="356,177,0,0" VerticalAlignment="Top" Width="649" Source="http://192.168.0.104/cstream/index.html" />
         <ListView HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100"/>
-
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="159,195,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="840"/>
-        <Button x:Name="turretleftButton_Copy" Content="Turret Left" HorizontalAlignment="Left" Margin="14,597,0,0" VerticalAlignment="Top" Click="turretLeftButton_ClickNew" ClickMode="Press" PointerExited="turretleftButton_Copy_PointerExited" Tapped="turretleftButton_Copy_Tapped"/>
-        <Button x:Name="forwardButton_Copy" Content="Forward" HorizontalAlignment="Left" Margin="393,542,0,0" VerticalAlignment="Top" Click="forwardButton_ClickNew" ClickMode="Press" PointerExited="forwardButton_Copy_PointerExited" Tapped="forwardButton_Copy_Tapped" BorderBrush="Transparent" Foreground="Transparent" Width="159" PointerEntered="forwardButton_Copy_PointerEntered" >
-            <Button.Background>
-                <ImageBrush ImageSource="Assets/Forward.png"/>
-                
-            </Button.Background>
-        </Button>
-        <Button x:Name="turretRightButton_Copy" Content="Turret Right" HorizontalAlignment="Left" Margin="206,597,0,0" VerticalAlignment="Top" Click="turretRightButton_ClickNew" ClickMode="Press" PointerExited="turretRightButton_Copy_PointerExited" Tapped="turretRightButton_Copy_Tapped"/>
-        <Button x:Name="goLeftButton_Copy" Content="Left" HorizontalAlignment="Left" Margin="57,640,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.044,3.898" Click="LeftButton_ClickNew" ClickMode="Press" PointerExited="goLeftButton_Copy_PointerExited" Tapped="goLeftButton_Copy_Tapped"/>
-        <Button x:Name="goRightButton_Copy" Content="Right" HorizontalAlignment="Left" Margin="206,640,0,0" VerticalAlignment="Top" Click="rightButton_ClickNew" ClickMode="Press" PointerExited="goRightButton_Copy_PointerExited" Tapped="goRightButton_Copy_Tapped"/>
-        <Button x:Name="gunLiftButton_Copy" Content="Gun Lift" HorizontalAlignment="Left" Margin="30,683,0,0" VerticalAlignment="Top" ClickMode="Press" Click="gunLiftButton_Copy_Click" Tapped="gunLiftButton_Copy_Tapped" PointerExited="gunLiftButton_Copy_PointerExited"/>
-        <Button x:Name="backButton_Copy" Content="Back" HorizontalAlignment="Left" Margin="127,683,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.47,0.447" Click="backwardButton_ClickNew" ClickMode="Press" PointerExited="backButton_Copy_PointerExited" Tapped="backButton_Copy_Tapped"/>
-        <Button x:Name="fireButton_Copy" Content="Fire" HorizontalAlignment="Left" Margin="206,683,0,0" VerticalAlignment="Top" Background="#FFCD1E1E" RenderTransformOrigin="0.703,3.974" Click="fireButton_ClickNew" ClickMode="Press" PointerExited="fireButton_Copy_PointerExited" Tapped="fireButton_Copy_Tapped"/>
-        <Button x:Name="stopButton_Copy" Content="Stop" HorizontalAlignment="Left" Margin="123,640,0,0" VerticalAlignment="Top" Background="#FFCD1E1E" RenderTransformOrigin="0.703,3.974" Click="stopButton_ClickNew" ClickMode="Press"/>
-        <Image x:Name="controlImage" HorizontalAlignment="Left" Height="62" Margin="189,384,0,0" VerticalAlignment="Top" Width="412" PointerEntered="controlImage_PointerEntered" Source="Assets/Forward.png" PointerExited="controlImage_PointerExited" Tapped="controlImage_Tapped" PointerPressed="controlImage_PointerPressed" PointerReleased="controlImage_PointerReleased"/>
+        <Image x:Name="ForwardButtonImage" HorizontalAlignment="Left" Height="24" Margin="87,631,0,0" VerticalAlignment="Top" Width="140" PointerEntered="controlImage_PointerEntered" Source="Assets/Forward.png" PointerExited="controlImage_PointerExited" Tapped="controlImage_Tapped" PointerPressed="controlImage_PointerPressed" PointerReleased="controlImage_PointerReleased"/>
+        <Image x:Name="stopImageButton" HorizontalAlignment="Left" Height="22" Margin="130,660,0,0" VerticalAlignment="Top" Width="43" Source="Assets/Stop.png" PointerEntered="stopImageButton_PointerEntered" PointerExited="stopImageButton_PointerExited" PointerPressed="stopImageButton_PointerPressed" PointerReleased="stopImageButton_PointerReleased"/>
+        <Image x:Name="turretLeftImageButton" HorizontalAlignment="Left" Height="36" Margin="434,695,0,0" VerticalAlignment="Top" Width="62" Source="Assets/TLeft.png" PointerEntered="turretLeftImageButton_PointerEntered" PointerExited="turretLeftImageButton_PointerExited" PointerPressed="turretLeftImageButton_PointerPressed" PointerReleased="turretLeftImageButton_PointerReleased"/>
+        <Image x:Name="turretRightImageButton" HorizontalAlignment="Left" Height="47" Margin="882,695,0,0" VerticalAlignment="Top" Width="63" Source="Assets/TRight.png" PointerEntered="turretRightImageButton_PointerEntered" PointerExited="turretRightImageButton_PointerExited" PointerPressed="turretRightImageButton_PointerPressed" PointerReleased="turretRightImageButton_PointerReleased"/>
+        <Image x:Name="leftImageButton" HorizontalAlignment="Left" Height="22" Margin="80,660,0,0" VerticalAlignment="Top" Width="45" Source="Assets/Left.png" PointerEntered="leftImageButton_PointerEntered" PointerExited="leftImageButton_PointerExited" PointerPressed="leftImageButton_PointerPressed" PointerReleased="leftImageButton_PointerReleased"/>
+        <Image x:Name="rightImageButton" HorizontalAlignment="Left" Height="22" Margin="178,660,0,0" VerticalAlignment="Top" Width="41" Source="Assets/Right.png" PointerEntered="rightImageButton_PointerEntered" PointerExited="rightImageButton_PointerExited" PointerPressed="rightImageButton_PointerPressed" PointerReleased="rightImageButton_PointerReleased"/>
+        <Image x:Name="gunLiftImageButton" HorizontalAlignment="Left" Height="25" Margin="71,717,0,0" VerticalAlignment="Top" Width="54" Source="Assets/GLift.png" PointerEntered="gunLiftImageButton_PointerEntered" PointerExited="gunLiftImageButton_PointerExited" PointerPressed="gunLiftImageButton_PointerPressed" PointerReleased="gunLiftImageButton_PointerReleased"/>
+        <Image x:Name="backImageButton" HorizontalAlignment="Left" Height="25" Margin="76,687,0,0" VerticalAlignment="Top" Width="138" Source="Assets/Back.png" PointerEntered="backImageButton_PointerEntered" PointerExited="backImageButton_PointerExited" PointerPressed="backImageButton_PointerPressed" PointerReleased="backImageButton_PointerReleased"/>
+        <Image x:Name="fireImageButton" HorizontalAlignment="Left" Height="22" Margin="130,717,0,0" VerticalAlignment="Top" Width="78" Source="Assets/CFire.png" PointerEntered="fireImageButton_PointerEntered" PointerExited="fireImageButton_PointerExited" PointerPressed="fireImageButton_PointerPressed" PointerReleased="fireImageButton_PointerReleased"/>
+        <Image x:Name="onOffImageButton" HorizontalAlignment="Left" Height="72" Margin="456,61,0,0" VerticalAlignment="Top" Width="73" Source="Assets/button-on.png" PointerEntered="onOffImageButton_PointerEntered" PointerExited="onOffImageButton_PointerExited" PointerPressed="onOffImageButton_PointerPressed" PointerReleased="onOffImageButton_PointerReleased"/>
 
 
     </Grid>

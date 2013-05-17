@@ -90,6 +90,7 @@ namespace TankWinTablet
         public bool canSend = true;
         private Accelerometer _accelerometer;
         private int crashCount = 0;
+        private Boolean onOffState = false;
 
         public MainPage()
         {
@@ -104,10 +105,7 @@ namespace TankWinTablet
                 _accelerometer = Accelerometer.GetDefault();
                 _accelerometer.ReportInterval = 10;
                 _accelerometer.ReadingChanged += _accelerometer_ReadingChanged;
-                textBox.Text = "Reading event ok";
                 _accelerometer.Shaken += _accelerometer_Shaken;
-                textBox.Text = "Skaen event ok";
-                textBox.Text = String.Format("{0}", _accelerometer.GetCurrentReading().AccelerationX);
                 DispatcherTimer timer = new DispatcherTimer();
                 timer.Interval = new TimeSpan(0,0,0,0,70);
                 timer.Tick+=main_timer_Tick;
@@ -116,7 +114,6 @@ namespace TankWinTablet
             catch 
             {
                 _accelerometer = null;
-                textBox.Text = "phailed";
             }
         }
 
@@ -171,7 +168,6 @@ namespace TankWinTablet
 
         void _accelerometer_Shaken(Accelerometer sender, AccelerometerShakenEventArgs args)
         {
-            textBox.Text = "Shaken!!!!";
             sendTankCommand(tankMainGunFireButtonAddress);
             DispatcherTimer timer = new DispatcherTimer();
             timer.Interval = new TimeSpan( 0, 0, 0, 2, 0);
@@ -191,13 +187,6 @@ namespace TankWinTablet
             var x = reading.AccelerationX;
             var y = reading.AccelerationY;
             var z = reading.AccelerationZ;
-            textBox.Text = String.Format("x: {0}, y: {1}, z:{2}", x, y, z);
-        }
-
-        private void startButton_ClickNew(object sender, RoutedEventArgs e)
-        {
-            sendTankCommand(tankOnButtonAddress);
-            sendTankCommand(tankOffButtonAddress);
         }
 
         private void resetTankStates()
@@ -213,22 +202,6 @@ namespace TankWinTablet
             firingMainGun = false;
         }
 
-        private void forwardButton_ClickNew(object sender, RoutedEventArgs e)
-        {
-           // ChangeBackground(forwardButton_Copy, "Forward_On");
-            if (!movingForward)
-            {
-                sendTankCommand(tankForwardButtonAddress);
-                resetTankStates();
-                movingForward = true;
-            }
-        }
-
-        private void stopButton_ClickNew(object sender, RoutedEventArgs e)
-        {
-            stopEvents();
-        }
-
         private void stopEvents()
         {
             sendTankCommand(tankStopMovementButtonAddress);
@@ -239,47 +212,6 @@ namespace TankWinTablet
             sendTankCommand(tankStopMainGunFireButtonAddress);
             resetTankStates();
         }
-
-        private void backwardButton_ClickNew(object sender, RoutedEventArgs e)
-        {
-            if (!movingBackward)
-            {
-                sendTankCommand(tankBackwardButtonAddress);
-                resetTankStates();
-                movingBackward = true;
-            }
-        }
-
-        private void rightButton_ClickNew(object sender, RoutedEventArgs e)
-        {
-            if (!rotatingRight)
-            {
-                sendTankCommand(tankRotateRightButtonAddress);
-                resetTankStates();
-                rotatingRight = true;
-            }
-        }
-
-        private void LeftButton_ClickNew(object sender, RoutedEventArgs e)
-        {
-            if (!rotatingLeft)
-            {
-                sendTankCommand(tankRotateLeftButtonAddress);
-                resetTankStates();
-                rotatingLeft = true;
-            }
-        }
-
-        private void turretLeftButton_ClickNew(object sender, RoutedEventArgs e)
-        {
-            if (!rotatingTurretLeft)
-            {
-                sendTankCommand(tankRotateLeftTurretButtonAddress);
-                resetTankStates();
-                rotatingTurretLeft = true;
-            }
-        }
-
 
         private void ReadWebRequestCallback(IAsyncResult callbackResult)
         {
@@ -300,7 +232,7 @@ namespace TankWinTablet
                 }
                 catch
                 {
-                    textBox.Text = String.Format("{0}", ++crashCount);
+                    //textBox.Text = String.Format("{0}", ++crashCount);
                 }
             }
 
@@ -313,165 +245,21 @@ namespace TankWinTablet
             request.BeginGetResponse(new AsyncCallback(ReadWebRequestCallback), request);
         }
 
-        private void turretRightButton_ClickNew(object sender, RoutedEventArgs e)
-        {
-            if (!rotatingTurretRight)
-            {
-                sendTankCommand(tankRotateRightTurretButtonAddress);
-                resetTankStates();
-                rotatingTurretRight = true;
-            }
-        }
-
-
-        private void fireButton_ClickNew(object sender, RoutedEventArgs e)
-        {
-            if (!firingMainGun)
-            {
-                sendTankCommand(tankMainGunFireButtonAddress);
-                resetTankStates();
-                firingMainGun = true;
-            }
-        }
-
-        private void gunLiftButton_Copy_Click(object sender, RoutedEventArgs e)
-        {
-            if (!movingMainGun)
-            {
-                sendTankCommand(tankMainGunMoveButtonAddress);
-                resetTankStates();
-                movingMainGun = true;
-            }
-        }
-
-        private void gunLiftButton_Copy_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            sendTankCommand(tankStopMainGunMoveButtonAddress);
-            resetTankStates();
-        }
-
-        private void gunLiftButton_Copy_PointerExited(object sender, PointerRoutedEventArgs e)
-        {
-            sendTankCommand(tankStopMainGunMoveButtonAddress);
-            resetTankStates();
-        }
-
-        private void backButton_Copy_PointerExited(object sender, PointerRoutedEventArgs e)
-        {
-            sendTankCommand(tankStopMovementButtonAddress);
-            resetTankStates();
-        }
-
-        private void backButton_Copy_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            sendTankCommand(tankStopMovementButtonAddress);
-            resetTankStates();
-        }
-
-        private void fireButton_Copy_PointerExited(object sender, PointerRoutedEventArgs e)
-        {
-            sendTankCommand(tankStopMainGunFireButtonAddress);
-            resetTankStates();
-        }
-
-        private void fireButton_Copy_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            sendTankCommand(tankStopMainGunFireButtonAddress);
-            resetTankStates();
-        }
-
-        private void goRightButton_Copy_PointerExited(object sender, PointerRoutedEventArgs e)
-        {
-            sendTankCommand(tankStopRotateButtonAddress);
-            resetTankStates();
-        }
-
-        private void goRightButton_Copy_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            sendTankCommand(tankStopRotateButtonAddress);
-            resetTankStates();
-        }
-
-        private void goLeftButton_Copy_PointerExited(object sender, PointerRoutedEventArgs e)
-        {
-            sendTankCommand(tankStopRotateButtonAddress);
-            resetTankStates();
-        }
-
-        private void goLeftButton_Copy_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            sendTankCommand(tankStopRotateButtonAddress);
-            resetTankStates();
-        }
-
-        private void turretleftButton_Copy_PointerExited(object sender, PointerRoutedEventArgs e)
-        {
-            sendTankCommand(tankStopRotateLeftTurretButtonAddress);
-            sendTankCommand(tankStopRotateRightTurretButtonAddress);
-            resetTankStates();
-        }
-
-        private void turretleftButton_Copy_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            sendTankCommand(tankStopRotateLeftTurretButtonAddress);
-            sendTankCommand(tankStopRotateRightTurretButtonAddress);
-            resetTankStates();
-        }
-
-        private void forwardButton_Copy_PointerExited(object sender, PointerRoutedEventArgs e)
-        {
-            sendTankCommand(tankStopMovementButtonAddress);
-            resetTankStates();
-        }
-
-        private void forwardButton_Copy_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            sendTankCommand(tankStopMovementButtonAddress);
-            resetTankStates();
-        }
-
-        private void turretRightButton_Copy_PointerExited(object sender, PointerRoutedEventArgs e)
-        {
-            sendTankCommand(tankStopRotateLeftTurretButtonAddress);
-            sendTankCommand(tankStopRotateRightTurretButtonAddress);
-            resetTankStates();
-        }
-
-        private void turretRightButton_Copy_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            sendTankCommand(tankStopRotateLeftTurretButtonAddress);
-            sendTankCommand(tankStopRotateRightTurretButtonAddress);
-            resetTankStates();
-        }
-
-        private void forwardButton_Copy_PointerEntered(object sender, PointerRoutedEventArgs e)
-        {
-            ChangeBackground(forwardButton_Copy, "Forward_On");
-        }
-
-        private void ChangeBackground(Button button, string adress)
-        {
-            button.Background = new ImageBrush
-            {
-                Stretch = Stretch.Fill,
-                ImageSource = new BitmapImage { UriSource = new Uri("ms-appx:///Assets/" + adress + ".png") }
-            };
-        }
-
         private void ChangeImageBackground(Image image, string adress)
         {
             BitmapImage bmp = new BitmapImage(new Uri("ms-appx:///Assets/" + adress + ".png"));
             image.Source = bmp;
         }
+//----------------------------------------NEW CONTROLLERS FROM THIS POINT--------------------------------
 
         private void controlImage_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
-            ChangeImageBackground(controlImage, "Forward_On");
+            ChangeImageBackground(ForwardButtonImage, "Forward_On");
         }
 
         private void controlImage_PointerExited(object sender, PointerRoutedEventArgs e)
         {
-            ChangeImageBackground(controlImage, "Forward");
+            ChangeImageBackground(ForwardButtonImage, "Forward");
             sendTankCommand(tankStopMovementButtonAddress);
             resetTankStates();
         }
@@ -483,7 +271,7 @@ namespace TankWinTablet
 
         private void controlImage_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
-            ChangeImageBackground(controlImage, "Forward_On");
+            ChangeImageBackground(ForwardButtonImage, "Forward_On");
             if (!movingForward)
             {
                 sendTankCommand(tankForwardButtonAddress);
@@ -494,9 +282,297 @@ namespace TankWinTablet
 
         private void controlImage_PointerReleased(object sender, PointerRoutedEventArgs e)
         {
-            ChangeImageBackground(controlImage, "Forward");
+            ChangeImageBackground(ForwardButtonImage, "Forward");
             sendTankCommand(tankStopMovementButtonAddress);
             resetTankStates();
+        }
+
+        private void turretLeftImageButton_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(turretLeftImageButton, "TLeft_On");
+        }
+
+        private void turretLeftImageButton_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(turretLeftImageButton, "TLeft");
+            sendTankCommand(tankStopRotateLeftTurretButtonAddress);
+            sendTankCommand(tankStopRotateRightTurretButtonAddress);
+            resetTankStates();
+        }
+
+        private void turretLeftImageButton_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(turretLeftImageButton, "TLeft_On");
+            if (!rotatingTurretLeft)
+            {
+                sendTankCommand(tankRotateLeftTurretButtonAddress);
+                resetTankStates();
+                rotatingTurretLeft = true;
+            }
+        }
+
+        private void turretLeftImageButton_PointerReleased(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(turretLeftImageButton, "TLeft");
+            sendTankCommand(tankStopRotateLeftTurretButtonAddress);
+            sendTankCommand(tankStopRotateRightTurretButtonAddress);
+            resetTankStates();
+        }
+
+        private void turretRightImageButton_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(turretRightImageButton, "TRight_On");
+        }
+
+        private void turretRightImageButton_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(turretRightImageButton, "TRight");
+            sendTankCommand(tankStopRotateLeftTurretButtonAddress);
+            sendTankCommand(tankStopRotateRightTurretButtonAddress);
+            resetTankStates();
+        }
+
+        private void turretRightImageButton_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(turretRightImageButton, "TRight_On");
+            if (!rotatingTurretRight)
+            {
+                sendTankCommand(tankRotateRightTurretButtonAddress);
+                resetTankStates();
+                rotatingTurretRight = true;
+            }
+        }
+
+        private void turretRightImageButton_PointerReleased(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(turretRightImageButton, "TRight");
+            sendTankCommand(tankStopRotateLeftTurretButtonAddress);
+            sendTankCommand(tankStopRotateRightTurretButtonAddress);
+            resetTankStates();
+        }
+
+        private void stopImageButton_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(stopImageButton, "Stop_On");
+        }
+
+        private void stopImageButton_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(stopImageButton, "Stop");
+        }
+
+        private void stopImageButton_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(stopImageButton, "Stop_On");
+            stopEvents();
+        }
+
+        private void stopImageButton_PointerReleased(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(stopImageButton, "Stop");
+        }
+
+        private void leftImageButton_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(leftImageButton, "Left_On");
+        }
+
+        private void leftImageButton_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(leftImageButton, "Left");
+            sendTankCommand(tankStopRotateButtonAddress);
+            resetTankStates();
+        }
+
+        private void leftImageButton_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(leftImageButton, "Left_On");
+            if (!rotatingLeft)
+            {
+                sendTankCommand(tankRotateLeftButtonAddress);
+                resetTankStates();
+                rotatingLeft = true;
+            }
+        }
+
+        private void leftImageButton_PointerReleased(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(leftImageButton, "Left");
+            sendTankCommand(tankStopRotateButtonAddress);
+            resetTankStates();
+        }
+
+        private void rightImageButton_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(rightImageButton, "Right_On");
+        }
+
+        private void rightImageButton_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(rightImageButton, "Right");
+            sendTankCommand(tankStopRotateButtonAddress);
+            resetTankStates();
+        }
+
+        private void rightImageButton_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(rightImageButton, "Right_On");
+            if (!rotatingRight)
+            {
+                sendTankCommand(tankRotateRightButtonAddress);
+                resetTankStates();
+                rotatingRight = true;
+            }
+        }
+
+        private void rightImageButton_PointerReleased(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(rightImageButton, "Right");
+            sendTankCommand(tankStopRotateButtonAddress);
+            resetTankStates();
+        }
+
+        private void backImageButton_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(backImageButton, "Back_On");
+        }
+
+        private void backImageButton_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(backImageButton, "Back");
+            sendTankCommand(tankStopMovementButtonAddress);
+            resetTankStates();
+        }
+
+        private void backImageButton_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(backImageButton, "Back_On");
+            if (!movingBackward)
+            {
+                sendTankCommand(tankBackwardButtonAddress);
+                resetTankStates();
+                movingBackward = true;
+            }
+        }
+
+        private void backImageButton_PointerReleased(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(backImageButton, "Back");
+            sendTankCommand(tankStopMovementButtonAddress);
+            resetTankStates();
+        }
+
+        private void gunLiftImageButton_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(gunLiftImageButton, "GLift_On");
+        }
+
+        private void gunLiftImageButton_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(gunLiftImageButton, "GLift");
+            sendTankCommand(tankStopMainGunMoveButtonAddress);
+            resetTankStates();
+        }
+
+        private void gunLiftImageButton_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(gunLiftImageButton, "GLift_On");
+            if (!movingMainGun)
+            {
+                sendTankCommand(tankMainGunMoveButtonAddress);
+                resetTankStates();
+                movingMainGun = true;
+            }
+        }
+
+        private void gunLiftImageButton_PointerReleased(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(gunLiftImageButton, "GLift");
+            sendTankCommand(tankStopMainGunMoveButtonAddress);
+            resetTankStates();
+        }
+
+        private void fireImageButton_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(fireImageButton, "CFire_On");
+        }
+
+        private void fireImageButton_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(fireImageButton, "CFire");
+            sendTankCommand(tankStopMainGunFireButtonAddress);
+            resetTankStates();
+        }
+
+        private void fireImageButton_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(fireImageButton, "CFire_On");
+            if (!firingMainGun)
+            {
+                sendTankCommand(tankMainGunFireButtonAddress);
+                resetTankStates();
+                firingMainGun = true;
+            }
+        }
+
+        private void fireImageButton_PointerReleased(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(fireImageButton, "CFire");
+            sendTankCommand(tankStopMainGunFireButtonAddress);
+            resetTankStates();
+        }
+
+        private void onOffImageButton_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            if (!onOffState)
+            {
+                ChangeImageBackground(onOffImageButton, "button-on-push");
+            }
+            else
+            {
+                ChangeImageBackground(onOffImageButton, "button-off-push");
+            }
+        }
+
+        private void onOffImageButton_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            if (!onOffState)
+            {
+                ChangeImageBackground(onOffImageButton, "button-on");
+            }
+            else
+            {
+                ChangeImageBackground(onOffImageButton, "button-off");
+            }
+        }
+
+        private void onOffImageButton_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+            sendTankCommand(tankOnButtonAddress);
+            sendTankCommand(tankOffButtonAddress);
+            if (!onOffState)
+            {
+                ChangeImageBackground(onOffImageButton, "button-on-push");
+
+            }
+            else
+            {
+                ChangeImageBackground(onOffImageButton, "button-off-push");
+            }
+        }
+
+        private void onOffImageButton_PointerReleased(object sender, PointerRoutedEventArgs e)
+        {
+            if (!onOffState)
+            {
+                ChangeImageBackground(onOffImageButton, "button-off");
+                onOffState = true;
+            }
+            else
+            {
+                ChangeImageBackground(onOffImageButton, "button-on");
+                onOffState = false;
+            }
         }
     }
 }

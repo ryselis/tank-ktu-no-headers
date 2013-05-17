@@ -1,5 +1,9 @@
 Assets\Back.png
 Assets\Back_On.png
+Assets\button-off.png
+Assets\button-off-push.png
+Assets\button-on.png
+Assets\button-on-push.png
 Assets\CFire.png
 Assets\CFire_On.png
 Assets\Forward.png
@@ -25,6 +29,8 @@ Assets\TLeft.png
 Assets\TLeft_On.png
 Assets\TRight.png
 Assets\TRight_On.png
+Assets\update-interface.png
+Assets\VIDEO.png
 App.xaml
 Common\StandardStyles.xaml
 MainPage.xaml

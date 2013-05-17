@@ -123,6 +123,10 @@
   <ItemGroup>
     <Content Include="Assets\Back.png" />
     <Content Include="Assets\Back_On.png" />
+    <Content Include="Assets\button-off-push.png" />
+    <Content Include="Assets\button-off.png" />
+    <Content Include="Assets\button-on-push.png" />
+    <Content Include="Assets\button-on.png" />
     <Content Include="Assets\CFire.png" />
     <Content Include="Assets\CFire_On.png" />
     <Content Include="Assets\Forward.png" />
@@ -148,6 +152,8 @@
     <Content Include="Assets\TLeft_On.png" />
     <Content Include="Assets\TRight.png" />
     <Content Include="Assets\TRight_On.png" />
+    <Content Include="Assets\update-interface.png" />
+    <Content Include="Assets\VIDEO.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

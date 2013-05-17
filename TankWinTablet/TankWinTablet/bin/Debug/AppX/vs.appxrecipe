@@ -16,17 +16,17 @@
     <AppXManifest Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-05-17T16:36:54.638</Modified>
+      <Modified>2013-05-17T18:41:19.484</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\bin\Debug\TankWinTablet.exe">
       <PackagePath>TankWinTablet.exe</PackagePath>
-      <Modified>2013-05-17T17:37:38.544</Modified>
+      <Modified>2013-05-17T18:46:14.949</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\bin\Debug\TankWinTablet.pdb">
       <PackagePath>TankWinTablet.pdb</PackagePath>
-      <Modified>2013-05-17T17:37:38.533</Modified>
+      <Modified>2013-05-17T18:46:14.927</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\packages\Microsoft.Bcl.Async.1.0.16\lib\win8\Microsoft.Threading.Tasks.dll">
       <PackagePath>Microsoft.Threading.Tasks.dll</PackagePath>
@@ -51,6 +51,22 @@
     <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\Assets\Back_On.png">
       <PackagePath>Assets\Back_On.png</PackagePath>
       <Modified>2013-05-17T15:29:26.566</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\Assets\button-off-push.png">
+      <PackagePath>Assets\button-off-push.png</PackagePath>
+      <Modified>2013-05-17T17:53:32.739</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\Assets\button-off.png">
+      <PackagePath>Assets\button-off.png</PackagePath>
+      <Modified>2013-05-17T17:53:32.733</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\Assets\button-on-push.png">
+      <PackagePath>Assets\button-on-push.png</PackagePath>
+      <Modified>2013-05-17T17:53:32.744</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\Assets\button-on.png">
+      <PackagePath>Assets\button-on.png</PackagePath>
+      <Modified>2013-05-17T17:53:32.741</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\Assets\CFire.png">
       <PackagePath>Assets\CFire.png</PackagePath>
@@ -156,6 +172,14 @@
       <PackagePath>Assets\TRight_On.png</PackagePath>
       <Modified>2013-05-17T15:29:26.629</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\Assets\update-interface.png">
+      <PackagePath>Assets\update-interface.png</PackagePath>
+      <Modified>2013-05-17T17:53:32.747</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\Assets\VIDEO.png">
+      <PackagePath>Assets\VIDEO.png</PackagePath>
+      <Modified>2013-05-17T18:32:00.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\bin\Debug\App.xaml">
       <PackagePath>App.xaml</PackagePath>
       <Modified>2013-05-17T12:31:46.034</Modified>
@@ -166,11 +190,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\bin\Debug\MainPage.xaml">
       <PackagePath>MainPage.xaml</PackagePath>
-      <Modified>2013-05-17T17:37:36.409</Modified>
+      <Modified>2013-05-17T18:46:13.293</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2013-05-17T16:36:54.569</Modified>
+      <Modified>2013-05-17T18:41:19.359</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
