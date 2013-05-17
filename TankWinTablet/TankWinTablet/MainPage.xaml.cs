@@ -468,8 +468,6 @@ namespace TankWinTablet
         private void controlImage_PointerExited(object sender, PointerRoutedEventArgs e)
         {
             ChangeImageBackground(controlImage, "Forward");
-            sendTankCommand(tankStopMovementButtonAddress);
-            resetTankStates();
         }
 
         private void controlImage_Tapped(object sender, TappedRoutedEventArgs e)

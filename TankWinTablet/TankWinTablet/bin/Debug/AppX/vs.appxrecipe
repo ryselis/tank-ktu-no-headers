@@ -5,28 +5,28 @@
     <WindowsUser>petku_000</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <RegisteredManifestChecksum>53919A5A4596673E76121325B354A40A4FAF1478F4844BD967FF9C73B99B39A6</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>db57348b-a81b-4060-9f1f-afefcdd44cba_1.0.0.16_neutral__az45n8jtjgq20</RegisteredPackageMoniker>
+    <RegisteredManifestChecksum>7D2F583F35E36E340FD16C01556DFBF33DC0C434C41F938E15B4933FD482B3E4</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>db57348b-a81b-4060-9f1f-afefcdd44cba_1.0.0.18_neutral__az45n8jtjgq20</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>db57348b-a81b-4060-9f1f-afefcdd44cba_az45n8jtjgq20!App</RegisteredUserModeAppID>
     <RegisteredPackageID>db57348b-a81b-4060-9f1f-afefcdd44cba</RegisteredPackageID>
     <RegisteredPackagePublisher>CN=petku_000</RegisteredPackagePublisher>
-    <RegisteredVersion>1.0.0.16</RegisteredVersion>
+    <RegisteredVersion>1.0.0.18</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-05-17T15:34:39.426</Modified>
+      <Modified>2013-05-17T16:36:54.638</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\bin\Debug\TankWinTablet.exe">
       <PackagePath>TankWinTablet.exe</PackagePath>
-      <Modified>2013-05-17T16:34:45.953</Modified>
+      <Modified>2013-05-17T17:15:18.050</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\bin\Debug\TankWinTablet.pdb">
       <PackagePath>TankWinTablet.pdb</PackagePath>
-      <Modified>2013-05-17T16:34:45.944</Modified>
+      <Modified>2013-05-17T17:15:18.042</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\packages\Microsoft.Bcl.Async.1.0.16\lib\win8\Microsoft.Threading.Tasks.dll">
       <PackagePath>Microsoft.Threading.Tasks.dll</PackagePath>
@@ -166,11 +166,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\bin\Debug\MainPage.xaml">
       <PackagePath>MainPage.xaml</PackagePath>
-      <Modified>2013-05-17T16:32:35.652</Modified>
+      <Modified>2013-05-17T17:14:42.947</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2013-05-17T15:34:39.279</Modified>
+      <Modified>2013-05-17T16:36:54.569</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
