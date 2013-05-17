@@ -121,14 +121,33 @@
     <None Include="TankWinTablet_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Back.png" />
+    <Content Include="Assets\Back_On.png" />
+    <Content Include="Assets\CFire.png" />
+    <Content Include="Assets\CFire_On.png" />
+    <Content Include="Assets\Forward.png" />
+    <Content Include="Assets\Forward_On.png" />
+    <Content Include="Assets\GLift.png" />
+    <Content Include="Assets\GLift_On.png" />
     <Content Include="Assets\interface-pad-tank.png" />
+    <Content Include="Assets\Left.png" />
+    <Content Include="Assets\Left_On.png" />
     <Content Include="Assets\Logo.png" />
     <Content Include="Assets\original1.png" />
     <Content Include="Assets\original2.png" />
+    <Content Include="Assets\Right.png" />
+    <Content Include="Assets\Right_On.png" />
     <Content Include="Assets\Shoot.png" />
     <Content Include="Assets\SmallLogo.png" />
     <Content Include="Assets\SplashScreen.png" />
+    <Content Include="Assets\Stop.png" />
+    <Content Include="Assets\Stop_On.png" />
     <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\tank-siluette.png" />
+    <Content Include="Assets\TLeft.png" />
+    <Content Include="Assets\TLeft_On.png" />
+    <Content Include="Assets\TRight.png" />
+    <Content Include="Assets\TRight_On.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

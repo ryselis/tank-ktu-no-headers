@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 using System.Threading;
 
@@ -210,6 +211,7 @@ namespace TankWinTablet
 
         private void forwardButton_ClickNew(object sender, RoutedEventArgs e)
         {
+           // ChangeBackground(forwardButton_Copy, "Forward_On");
             if (!movingForward)
             {
                 sendTankCommand(tankForwardButtonAddress);
@@ -307,11 +309,6 @@ namespace TankWinTablet
             request.BeginGetResponse(new AsyncCallback(ReadWebRequestCallback), request);
         }
 
-        private void DispatcherTimerEventHandler(object sender, object e)
-        {
-            canSend = true;
-        }
-
         private void turretRightButton_ClickNew(object sender, RoutedEventArgs e)
         {
             if (!rotatingTurretRight)
@@ -331,11 +328,6 @@ namespace TankWinTablet
                 resetTankStates();
                 firingMainGun = true;
             }
-        }
-
-        private void tankBodyImage_DragEnter(object sender, DragEventArgs e)
-        {
-         
         }
 
         private void gunLiftButton_Copy_Click(object sender, RoutedEventArgs e)
@@ -447,6 +439,66 @@ namespace TankWinTablet
             sendTankCommand(tankStopRotateRightTurretButtonAddress);
             resetTankStates();
         }
+
+        private void forwardButton_Copy_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeBackground(forwardButton_Copy, "Forward_On");
+        }
+
+        private void ChangeBackground(Button button, string adress)
+        {
+            button.Background = new ImageBrush
+            {
+                Stretch = Stretch.Fill,
+                ImageSource = new BitmapImage { UriSource = new Uri("ms-appx:///Assets/" + adress + ".png") }
+            };
+        }
+
+        private void ChangeImageBackground(Image image, string adress)
+        {
+            BitmapImage bmp = new BitmapImage(new Uri("ms-appx:///Assets/" + adress + ".png"));
+            image.Source = bmp;
+        }
+
+        private void controlImage_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(controlImage, "Forward_On");
+        }
+
+        private void controlImage_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(controlImage, "Forward");
+            sendTankCommand(tankStopMovementButtonAddress);
+            resetTankStates();
+        }
+
+        private void controlImage_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            //ChangeImageBackground(controlImage, "Forward");
+        }
+
+        private void controlImage_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(controlImage, "Forward_On");
+            if (!movingForward)
+            {
+                sendTankCommand(tankForwardButtonAddress);
+                resetTankStates();
+                movingForward = true;
+            }
+        }
+
+        private void controlImage_PointerReleased(object sender, PointerRoutedEventArgs e)
+        {
+            ChangeImageBackground(controlImage, "Forward");
+            sendTankCommand(tankStopMovementButtonAddress);
+            resetTankStates();
+        }
+
+
+
+
+
 
 
     }

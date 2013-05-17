@@ -1,1 +1,1 @@
-C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank-ktu-no-headers\TankWinTablet\TankWinTablet\AppPackages\TankWinTablet_1.0.0.16_AnyCPU_Debug_Test\TankWinTablet_1.0.0.16_AnyCPU_Debug.appx
+C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\AppPackages\TankWinTablet_1.0.0.18_AnyCPU_Debug_Test\TankWinTablet_1.0.0.18_AnyCPU_Debug.appx
