@@ -26,12 +26,12 @@ function onDeviceMotion(event) {
 				//$("#stateF").text('forward false');
 			}
 		}
-		if (accelerationZ > 2 && accelerationX < -2) {
+		if (accelerationZ > 4 && accelerationX < -2) {
 			//$("#stateB").text('back_fast true');
 			tankMove('back_fast', true);
 			movesBack = true;
 		} else {
-			if (accelerationZ > 0 && accelerationX < -2) {
+			if (accelerationZ > 2 && accelerationX < -2) {
 				//$("#stateB").text('back true');
 				tankMove('back', true);
 				movesBack = true;

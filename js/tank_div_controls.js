@@ -181,7 +181,7 @@ function tankMove(move, state) {
 					//$('#stateL').text(leftcount);
 					break;
 				case 'right':
-					request('rotate/170');
+					request('rotate/175');
 					RotateTankImageClock();
 					rightcount++;
 					//$('#stateR').text(rightcount);
