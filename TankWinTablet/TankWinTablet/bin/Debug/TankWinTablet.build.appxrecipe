@@ -80,6 +80,10 @@
       <PackagePath>Assets\Logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\petku_000\Documents\Darbas\Tankas\tank-no-headers\tank winTablet v2\tank-ktu-no-headers\TankWinTablet\TankWinTablet\Assets\original1.png">
       <PackagePath>Assets\original1.png</PackagePath>
     </AppxPackagedFile>

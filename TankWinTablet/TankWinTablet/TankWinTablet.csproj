@@ -137,6 +137,7 @@
     <Content Include="Assets\Left.png" />
     <Content Include="Assets\Left_On.png" />
     <Content Include="Assets\Logo.png" />
+    <Content Include="Assets\Logo.scale-100.png" />
     <Content Include="Assets\original1.png" />
     <Content Include="Assets\original2.png" />
     <Content Include="Assets\Right.png" />
