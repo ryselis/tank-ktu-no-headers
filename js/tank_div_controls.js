@@ -167,7 +167,7 @@ function tankMove(move, state) {
 		if (state) {
 			switch(move) {
 				case 'left':
-					request('rotate/50');
+					request('rotate/75');
 					RotateTankImageCountClock();
 					break;
 				case 'right':
