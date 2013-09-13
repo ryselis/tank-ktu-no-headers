@@ -208,7 +208,7 @@ function tankMove(move, state) {
 			console.log(move);
 			switch(move) {
 				case 'left':
-					request('rotate/127');
+					request('rotate/130');
 
 					RevertTankRotate();
 					break;
